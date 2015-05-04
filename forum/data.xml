@@ -1,0 +1,1376 @@
+<root>
+  <topic>
+    <topic_index>11</topic_index>
+    <topic_name>Gentoo Forums :: View topic - Downloading and compiling at same time</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-11-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Sublime</post_author>
+      <post_posted>Tue Apr 09, 2002 10:40 pm</post_posted>
+      <post_subject>Downloading and compiling at same time</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 10:40 pm&#160;&#160; &#160;Post subject: Downloading and compiling at same time\n  \n\n\n\n\n\nHey everyone,&#13;\n\n\nI know some other build from scratch distros. That when you are compiling source code it is actually downloading the nex things.&#13;\n\n\nExample&#13;\n\n\nsay if you are downloading gnome but don't have X it will download the first package of X then download the thing that is depended on the first thing. So when the first is done compiling, it can start the next oen right up. This would save time, this also helps for the people on modems (God help them )&#13;\n\n\nJust an idea&#13;\n\n\nSublime\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Tue Apr 09, 2002 10:46 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 10:46 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nThe gentoo people are verry bright, there is the option --fetchonly:&#13;\n\n\n Quote:   \n\n--fetchonly, -f&#13;\n\n        Instead of doing any package building,  just  per-&#13;\n\n       form fetches for all packages (main package as well&#13;\n\n       as all dependencies.)&#13;\n\n \n\n\nIts not realy at the same time, but it saves some time for the poor telephone users.. \n\n\n(You will have to run the same emerge line without -f after the fetching, iirc)_________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Sublime</post_author>
+      <post_posted>Tue Apr 09, 2002 11:16 pm</post_posted>
+      <post_subject>downloading and compiling</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 11:16 pm&#160;&#160; &#160;Post subject: downloading and compiling\n  \n\n\n\n\n\nyeah i know there is a --fetchonly thing, but you have to run emerge twice, would be nice if by a config option was avialbe --compile-download or something along those lines. Just a suggestion&#13;\n\n\nSublime\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>m3thos</post_author>
+      <post_posted>Wed Apr 10, 2002 12:28 am</post_posted>
+      <post_subject>yup, totally parallel: compile | download code</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 12:28 am&#160;&#160; &#160;Post subject: yup, totally parallel: compile | download code\n  \n\n\n\n\n\nI also desire this for a long time.. why shouldn't portage start downloading the second package, just after finished downloading the first, and at the same time it's compiling the first?&#13;\n\n\n* It's parallel&#13;\n\n* It's a performance enhancement &#13;\n\n* It's finer and more elegant strategy&#13;\n\n* It's usefull for everyone!&#13;\n\n\nDificulties: &#13;\n\n* It would be better to implement this thing with some kind of semaphore or a similar dependency system, and.. semaphores can be tricky!&#13;\n\nBut, this would put portage in a superior level, and with it, other parallel and independent procedures could be implemented._________________Miguel Sousa Filipe&#13;\n\nhandle: m3thos&#13;\n\nMore human than human\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fatty</post_author>
+      <post_posted>Wed Apr 10, 2002 2:48 am</post_posted>
+      <post_subject>semaphores??  to complicated!</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:48 am&#160;&#160; &#160;Post subject: semaphores??  to complicated!\n  \n\n\n\n\n\nI hate to namedrop, but I am switching over from Sorcerer GNU Linux (experimentally) and they have a system where all source files are downloaded WHILE others are compiling... the best part is that sorcery (their version of emerge) is written as a bash script.&#13;\n\n\nThere really shouldn't be any need for semaphores or similarly complicated systems... just download the bleedin' files in the background in order of which are needed first in the dependecy structure, then begin compiling/installing as soon as they are available and all previous dependencies have been installed.  That's not so tough, is it?_________________I wouldn't recommend sex, drugs or insanity for everyone, but they've always worked for me. &#13;\n\n\n-Dr. Hunter S. Thompson\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Sublime</post_author>
+      <post_posted>Wed Apr 10, 2002 5:12 am</post_posted>
+      <post_subject>Sorcerer</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 5:12 am&#160;&#160; &#160;Post subject: Sorcerer\n  \n\n\n\n\n\nI know Sorcerer has the feature. My question is how can it be anymore complicated then it already is? i mean gentoo gets the dependencies and lists them already might as well take it a step further and make it start downloading all needed packages one by one.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fghellar</post_author>
+      <post_posted>Wed Apr 10, 2002 11:17 pm</post_posted>
+      <post_subject>downloading and compiling</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 11:17 pm&#160;&#160; &#160;Post subject: downloading and compiling\n  \n\n\n\n\n\nI think it could be done using FIFO (First In, First Out) structures.&#13;\n\n\nI personally do not know (yet) the internals of the Portage system, but the way I see it, it does already implement the idea of a FIFO structure when merging a new package and its dependencies. It is basically a top-down list of things to do. Currently, this list, if one could see it, would look like this:&#13;\n\n Code:   download package1&#13;\n\ncompile package1&#13;\n\ndownload package2&#13;\n\ncompile package2&#13;\n\ndownload package3&#13;\n\ncompile package3&#13;\n\n... \n\nAbove, each entry would be written in the beggining of the process.&#13;\n\n\nNow, I think it wouldn't be that hard to split that list into two separeted lists, one for downloading and one for compiling. They would look like this:&#13;\n\n Code:   download package1&#160; &#160;&#160; &#160;&#160; &#160;&#160; &#160;compile package1&#13;\n\ndownload package2&#160; &#160;&#160; &#160;&#160; &#160;&#160; &#160;compile package2&#13;\n\ndownload package3&#160; &#160;&#160; &#160;&#160; &#160;&#160; &#160;compile package3&#13;\n\ndownload package4&#160; &#160;&#160; &#160;&#160; &#160;&#160; &#160;...&#13;\n\n... \n\nAbove, each entry in the dowload list would be written in the beggining of the process, and each entry in the compile list would be written by the corresponding entry in the download list once it had finnished downloading that package. This would allow the downloading process to move ahead independently from the compiling process.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>m3thos</post_author>
+      <post_posted>Sat Apr 13, 2002 12:46 am</post_posted>
+      <post_subject>it can be simpler, but we can start of with something more..</post_subject>
+      <post_text>\n\nPosted: Sat Apr 13, 2002 12:46 am&#160;&#160; &#160;Post subject: it can be simpler, but we can start of with something more..\n  \n\n\n\n\n\n..powerfull and flexible, more geared towards future enhancements.&#13;\n\n\n fatty wrote:   I hate to namedrop, but I am switching over from Sorcerer GNU Linux (experimentally) and they have a system where all source files are downloaded WHILE others are compiling... the best part is that sorcery (their version of emerge) is written as a bash script.&#13;\n\n\nThere really shouldn't be any need for semaphores or similarly complicated systems... just download the bleedin' files in the background in order of which are needed first in the dependecy structure, then begin compiling/installing as soon as they are available and all previous dependencies have been installed.  That's not so tough, is it? \n\n\nYes..you're right.. it can be made simpler, I was thinking this wrong.. something like: downloading dependencies while compiling a program that needed those dependencies.. and he would stop at a semafore for the dependant aplication to be installed and then would proceed...&#13;\n\n\nbut.. for instance.. imagine we allready downloaded a dependency and we're compiling it.. and also finished the download of the aplication, now.. if we start unpacking and runing "configure &amp;&amp; make, make install" the aplication without the dependency finishes tit's install there will be trouble! Right?&#13;\n\n\nSo.. the aplication must wait for the dependency to finish it's install!..&#13;\n\n\nbut.. since we're talking streamlined compiles and streamlined downloads in parallel this won't happen. but.. if we want this in the future... it would be good to start thinking about this sincronization problems, implementing some solution and use it in this kind of paralelism too!_________________Miguel Sousa Filipe&#13;\n\nhandle: m3thos&#13;\n\nMore human than human\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fghellar</post_author>
+      <post_posted>Sat Apr 13, 2002 1:30 am</post_posted>
+      <post_subject>downloading and compiling</post_subject>
+      <post_text>\n\nPosted: Sat Apr 13, 2002 1:30 am&#160;&#160; &#160;Post subject: downloading and compiling\n  \n\n\n\n\n\n m3thos wrote:   if we want this in the future... it would be good to start thinking about this sincronization problems, implementing some solution and use it in this kind of paralelism too! \n\nThis problem is solved if it's done the way I described above.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>I18N</post_author>
+      <post_posted>Mon Apr 15, 2002 7:37 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Apr 15, 2002 7:37 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI'm a modem user. when I firsst started using gentoo I thought this would have been fantastic... but wouldn't it result in massive fragmentation of the harddisk? for all I know the journalling filesystems may be intelligent enough to solve this, it's just a thought that occurred to me.&#13;\n\nanother thing that would be good:&#13;\n\nif there was an install cd that came with a large selection of the distfiles needed for a complete system.&#13;\n\nusing emerge -f I grabbed all the distfiles at a friends house via dsl, then built the system at home. my distfiles folder is under 400mb for a complete system, and could easily fit on a cd_________________Rarr.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tvon</post_author>
+      <post_posted>Tue Apr 16, 2002 4:27 pm</post_posted>
+      <post_subject>Portage2</post_subject>
+      <post_text>\n\nPosted: Tue Apr 16, 2002 4:27 pm&#160;&#160; &#160;Post subject: Portage2\n  \n\n\n\n\n\nThis has been a highly requested feature of Portage that will not be in version 1.  Portage2 is going to be a complete rewrite of the code and will allow for downloads while compiling.&#13;\n\n\nSome newish Gentoo developer who came from Sorcerer posted a bug to bugs.gentoo.org about this, but for the life of me I cant remember his name or find the bug.&#13;\n\n\nGranted, I'm not a dev and I have no idea how things like Bevin's departure are affecting Portage2 or when it might be beta-ready.&#13;\n\n\n-T\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>carpaski</post_author>
+      <post_posted>Sun Aug 04, 2002 1:47 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Aug 04, 2002 1:47 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nTalk of Portage2 is on the wrong track. But anyway...&#13;\n\n\nI've got code that does concurrent downloads...&#13;\n\nI need more testing before I can tell drobbins that it's done.&#13;\n\n\nHelp me test it, please?&#13;\n\n\nhttps://bugs.gentoo.org/show_bug.cgi?id=1661_________________Nicholas Jones &lt;carpaski@gentoo.org&gt;&#13;\n\nGentoo Linux Developer\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>2</topic_index>
+    <topic_name>Gentoo Forums :: View topic - Welcome to gentoo.frozenliquid.net</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-2-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Mon Apr 08, 2002 11:47 pm</post_posted>
+      <post_subject>Welcome to gentoo.frozenliquid.net</post_subject>
+      <post_text>\n\nPosted: Mon Apr 08, 2002 11:47 pm&#160;&#160; &#160;Post subject: Welcome to gentoo.frozenliquid.net\n  \n\n\n\n\n\nThis forum is my shot at helping users of Gentoo (including myself  ).  Right now the forums are pretty basic.  Soon as we see if the site takes off or dies maybe we could move it to something more appropriate such as forums.gentoo.org, and add more forums.  Right now I am  only powered by a 2000/380 on cable.  Not that great, but MRTG tells me that I rarely ever hit my cap.  So I guess we'll see...&#13;\n\n\nIn the mean time, we have to get people to spread the word and use the forum.  I usually hang out on IRC @ irc.openprojects.net in #gentoo as nitroteen.  You can reach me there, or drop me an email @ kyle@frozenliquid.net&#13;\n\n\nAfter we get more users we can create new forums, add some moderators.&#13;\n\n\nNow that you are here, go make an account and test it out, and most importantly, spread the word! [/url]_________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.Last edited by Nitro on Tue Feb 18, 2003 2:37 am; edited 4 times in total\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>chrono</post_author>
+      <post_posted>Tue Apr 09, 2002 1:24 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 1:24 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nIt seems like a pretty good idea. i really like the forum theme, and best of all i didn't have to rummage through my email to find some assigned password, like on other boards \n\n\nlookn' good, good luck\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Tue Apr 09, 2002 9:05 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:05 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nCool forum, i realy like phpbb2, I've got it running here too \n\n\nBut isn't it a thing to make the polls open for not-registered users ? That way every 1 could vote, and get a lot more votes..._________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Tue Apr 09, 2002 9:10 pm</post_posted>
+      <post_subject>Yeah but...</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:10 pm&#160;&#160; &#160;Post subject: Yeah but...\n  \n\n\n\n\n\nI don't know if that would be such a good idea, with requring a login we can prevent people from voting a million times.  Of course that doesn't stop someone from making another account and voting again, but I guess it helps.&#13;\n\n\nIf more people want it, I guess I could fix it._________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Tue Apr 09, 2002 9:12 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:12 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nIIRC you can vote only once per ip.. (But i'm not sure)_________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>cat5</post_author>
+      <post_posted>Wed Apr 10, 2002 12:20 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 12:20 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI run 2 forums here at home as well on a 3.5Meg / 1.2Meg DSL, and MRTG shows me that I never use it all!  1 forum is pretty big, and the other is private.. so no worries. This may eventually... I mean eventually have to go to a professional hosting company, or get Gentoo to make this official \n\n\nI like the idea.. Keep it up.&#13;\n\n\nI am always 'Cat5' in #gentoo_________________cat5@catfive.org\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 1:52 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 1:52 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\na good voting system (which I'm sure phpbb has) will only allow one vote per ip... so making it anonymous should be fine (and allow for more a bigger surveyed audience)\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>PhrostByte</post_author>
+      <post_posted>Wed Apr 10, 2002 2:05 am</post_posted>
+      <post_subject>Nice</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:05 am&#160;&#160; &#160;Post subject: Nice\n  \n\n\n\n\n\nnice board, hope it'll kick off fast, no reason not to.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>diseaser</post_author>
+      <post_posted>Thu Apr 11, 2002 10:32 pm</post_posted>
+      <post_subject>gentoouser.org</post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 10:32 pm&#160;&#160; &#160;Post subject: gentoouser.org\n  \n\n\n\n\n\nWhat about those guys?  I like the URL, but I like the look/feel of this site better.&#13;\n\n\nIs there some kind of agreement you guys can come to perhaps?&#13;\n\n\nforums.gentoo.org sounds nice too.&#13;\n\n\nI feel bad for gentoouser.org guys because that's a perfectly fitting domain going to waste._________________-- &#13;\n\ndiseaser\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roy</post_author>
+      <post_posted>Mon Apr 15, 2002 2:26 am</post_posted>
+      <post_subject>This is excelent</post_subject>
+      <post_text>\n\nPosted: Mon Apr 15, 2002 2:26 am&#160;&#160; &#160;Post subject: This is excelent\n  \n\n\n\n\n\nThe forum is an excelent idea.&#13;\n\n\nCurrently it seems the only way to get help is through the mailing list. The problem with that is there is no search facility that I could find so help requests end up being repeated over and over.&#13;\n\n\nI hope this takes off. Gentoo is excelent, but I've certainly had more problems with it than any other distro a good help forum is needed._________________/* Halley */&#13;\n\n	(Halley's comment.)\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>yucao89</post_author>
+      <post_posted>Sun Jun 08, 2003 3:22 pm</post_posted>
+      <post_subject>who host it?</post_subject>
+      <post_text>\n\nPosted: Sun Jun 08, 2003 3:22 pm&#160;&#160; &#160;Post subject: who host it?\n  \n\n\n\n\n\nDoes kyle host this forums or gentoo techonologies &#13;\n\nkyle is nitro! \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Mon Jun 09, 2003 5:11 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 5:11 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nKyle is nitro, and originally, Kyle hosted the forums.  Since then, they have become official.&#13;\n\n\n\nMoved from Other Things Gentoo._________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>yucao89</post_author>
+      <post_posted>Mon Jun 09, 2003 5:29 pm</post_posted>
+      <post_subject>Yeah i know</post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 5:29 pm&#160;&#160; &#160;Post subject: Yeah i know\n  \n\n\n\n\n\nI know kyle, i chat with him a lot, But in the beginning how did kyle host it?&#13;\n\nunderwhich domain name?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Lovechild</post_author>
+      <post_posted>Mon Jun 09, 2003 5:44 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 5:44 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nhorrible idea - 2 forums that basically do the same?&#13;\n\n\nWhy not make forums.gentoo.org even better instead?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>idl</post_author>
+      <post_posted>Mon Jun 09, 2003 5:55 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 5:55 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Lovechild wrote:   horrible idea - 2 forums that basically do the same?&#13;\n\n\nWhy not make forums.gentoo.org even better instead? \n\n\nLovechild you spooner, get some glasses  Look at the date of the first post._________________a.k.a port001&#13;\n\nFound a bug? Please report it: Gentoo Bugzilla\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Mon Jun 09, 2003 6:01 pm</post_posted>
+      <post_subject>Re: Yeah i know</post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 6:01 pm&#160;&#160; &#160;Post subject: Re: Yeah i know\n  \n\n\n\n\n\n yucao89 wrote:   I know kyle, i chat with him a lot, But in the beginning how did kyle host it?&#13;\n\nunderwhich domain name? Ask him?  Otherwise, I'm guessing the thread title hints at what domain name._________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Lovechild</post_author>
+      <post_posted>Mon Jun 09, 2003 6:19 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 6:19 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nmaybe someone should have locked this thread LONG AGO maybe?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Mon Jun 09, 2003 6:33 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Jun 09, 2003 6:33 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nProbably no reason to leave it unlocked.&#13;\n\n\nNaturally, Nitro can unlock it if he'd like._________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>6</topic_index>
+    <topic_name>Gentoo Forums :: View topic - nitro rocks</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-6-postdays-0-postorder-asc-start-50.html</topic_address>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>fatty</post_author>
+      <post_posted>Tue Apr 09, 2002 2:16 am</post_posted>
+      <post_subject>nitro rocks</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 2:16 am&#160;&#160; &#160;Post subject: nitro rocks\n  \n\n\n\n\n\nI don't mean to suggest that you should burden him with all your worldly cares, but he certainly fixed me right up when I had a Gentoo question.&#13;\n\n\nLet's hear it for nitroteen!_________________I wouldn't recommend sex, drugs or insanity for everyone, but they've always worked for me. &#13;\n\n\n-Dr. Hunter S. Thompson\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>TheCoop</post_author>
+      <post_posted>Sun Jun 22, 2003 2:48 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Jun 22, 2003 2:48 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\ni never knew the forums went back this far...&#13;\n\n\nlets hear it for nitro! w00t!_________________95% of all computer errors occur between chair and keyboard (TM)&#13;\n\n\n"One World, One web, One program" - Microsoft Promo ad.&#13;\n\n"Ein Volk, Ein Reich, Ein F&#252;hrer" - Adolf Hitler&#13;\n\n\nChange the world - move a rock\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>puggy</post_author>
+      <post_posted>Sun Jun 22, 2003 2:54 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Jun 22, 2003 2:54 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nHehe. I see you too have been looknig at old posts TheCoop. \n\n\nPuggy_________________Where there's open source , there's a way.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>darktux</post_author>
+      <post_posted>Sun Jun 22, 2003 4:56 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Jun 22, 2003 4:56 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nyeah!&#13;\n\n\nnitro seems like a very nice guy in deed._________________Lego my ego, and I'll lego your knowledge\n\n\nwww.tuxslare.org - My reborn website \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>nixnut</post_author>
+      <post_posted>Wed Oct 19, 2005 5:29 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Oct 19, 2005 5:29 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nDuh, I thought it this was about the nitro kernel_________________Please add [solved] to the initial post's subject line if you feel your problem is resolved. Help answer the unanswered\n\n\ntalk is cheap. supply exceeds demand\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Butts McCokey</post_author>
+      <post_posted>Mon Dec 05, 2005 11:27 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Dec 05, 2005 11:27 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n nixnut wrote:   Duh, I thought it this was about the nitro kernel and they call me a necromancer!_________________Since the bible and the church are obviously mistaken about where we came from, how can we trust them with where we're going?&#13;\n\n\n"An eye for an eye will make us all blind" - Gandhi&#13;\n\n\nCold is gods way to tell us to burn more Catholics\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Cinder6</post_author>
+      <post_posted>Tue Dec 06, 2005 2:00 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 2:00 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n nixnut wrote:   Duh, I thought it this was about the nitro kernel \n\n\nSame here _________________Knowledge is power.&#13;\n\nPower corrupts.&#13;\n\nStudy hard.&#13;\n\nBe evil.&#13;\n\n\nUgly Overload\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Tue Dec 06, 2005 3:04 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 3:04 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nMoved from Other Things Gentoo_________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Frodg</post_author>
+      <post_posted>Tue Dec 06, 2005 3:04 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 3:04 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nThis must be a record for the longest time to get a post acknowledged..&#13;\n\nIs nitroteen &amp; or fatty still around?_________________Aerosolo ergo sum - I spray therefore I am&#13;\n\n\nGentoo - Registered Linux User # 361400\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>omp</post_author>
+      <post_posted>Tue Dec 06, 2005 3:20 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 3:20 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Cinder6 wrote:    nixnut wrote:   Duh, I thought it this was about the nitro kernel \n\n\nSame here  \n\n\nMe too._________________meow.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>codergeek42</post_author>
+      <post_posted>Tue Dec 06, 2005 3:20 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 3:20 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nLikewise.  I was almost going to move this to Unsupported Software. _________________~~ Peter: Brony, GNU/Linux geek, caffeine addict, and Free Software advocate.&#13;\n\nWho am I? :: EFF &amp; FSF\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Tue Dec 06, 2005 3:39 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 3:39 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Frodg wrote:   This must be a record for the longest time to get a post acknowledged  This one beats it:  https://forums.gentoo.org/viewtopic-t-2542.html_________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Frodg</post_author>
+      <post_posted>Tue Dec 06, 2005 3:50 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 3:50 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nfatty's last post was on    -   Tue Apr 09, 2002 11:18 pm_________________Aerosolo ergo sum - I spray therefore I am&#13;\n\n\nGentoo - Registered Linux User # 361400\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Omega21</post_author>
+      <post_posted>Tue Dec 06, 2005 5:44 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 5:44 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n nixnut wrote:   Duh, I thought it this was about the nitro kernel \n\n\nDitto. Whos this Nitro guy? _________________iMac G4 1GHz :: q6600 //2x 500GB//2GB RAM//8600GT//Gentoo :: MacBook Pro//2.53GHz\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Omega21</post_author>
+      <post_posted>Tue Dec 06, 2005 5:45 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 5:45 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Frodg wrote:   fatty's last post was on    -   Tue Apr 09, 2002 11:18 pm \n\n\nOK, calling someone fat on a geek forum is like calling someone fit on a soccer team._________________iMac G4 1GHz :: q6600 //2x 500GB//2GB RAM//8600GT//Gentoo :: MacBook Pro//2.53GHz\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Q-collective</post_author>
+      <post_posted>Tue Dec 06, 2005 5:53 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 5:53 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n cokehabit wrote:    nixnut wrote:   Duh, I thought it this was about the nitro kernel and they call me a necromancer! Well, you could form a team\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Archangel1</post_author>
+      <post_posted>Tue Dec 06, 2005 6:53 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 6:53 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Omega21 wrote:   OK, calling someone fat on a geek forum is like calling someone fit on a soccer team. \n\nSpeak for yourself champ \n\n\nDepends on the team anyway _________________What are you, stupid?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Butts McCokey</post_author>
+      <post_posted>Tue Dec 06, 2005 1:14 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 1:14 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n pjp wrote:    Frodg wrote:   This must be a record for the longest time to get a post acknowledged  This one beats it:  https://forums.gentoo.org/viewtopic-t-2542.html ok, ok, that was a while..._________________Since the bible and the church are obviously mistaken about where we came from, how can we trust them with where we're going?&#13;\n\n\n"An eye for an eye will make us all blind" - Gandhi&#13;\n\n\nCold is gods way to tell us to burn more Catholics\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>nixnut</post_author>
+      <post_posted>Tue Dec 06, 2005 2:53 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 2:53 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n cokehabit wrote:    nixnut wrote:   Duh, I thought it this was about the nitro kernel and they call me a necromancer! You are. Or you would never have found this thread in the first place.  _________________Please add [solved] to the initial post's subject line if you feel your problem is resolved. Help answer the unanswered\n\n\ntalk is cheap. supply exceeds demand\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Butts McCokey</post_author>
+      <post_posted>Tue Dec 06, 2005 4:17 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 4:17 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n nixnut wrote:    cokehabit wrote:    nixnut wrote:   Duh, I thought it this was about the nitro kernel and they call me a necromancer! You are. Or you would never have found this thread in the first place.   noooooo, it was higher up because *you* made it higher, i was searching_________________Since the bible and the church are obviously mistaken about where we came from, how can we trust them with where we're going?&#13;\n\n\n"An eye for an eye will make us all blind" - Gandhi&#13;\n\n\nCold is gods way to tell us to burn more Catholics\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Tue Dec 06, 2005 5:01 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Dec 06, 2005 5:01 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Frodg wrote:   fatty's last post was on    -   Tue Apr 09, 2002 11:18 pm Yes, but it was replied to in 2003._________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>someguy</post_author>
+      <post_posted>Thu Dec 08, 2005 2:46 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Dec 08, 2005 2:46 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nsheesh_________________print pack"C*",split/\D+/,`echo "16iII*o\U@{$/=$z;[(pop,pop,unpack"H*",&lt;&gt;&#13;\n\n)]}\EsMsKsN0[lN*1lK[d2%Sa2/d0&lt;X+d*lMLa^*lN%0]dsXx++lMlN/dsM0&lt;J]dsJxp"|dc`&#13;\n\nwhile [ 1 ] ; do echo "*" | telnet ip.of.print.er 9100 ; done\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>omp</post_author>
+      <post_posted>Thu Dec 08, 2005 2:52 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Dec 08, 2005 2:52 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n codergeek42 wrote:   Likewise.  I was almost going to move this to Unsupported Software.  But isn't that a support forum... _________________meow.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Butts McCokey</post_author>
+      <post_posted>Thu Dec 08, 2005 1:21 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Dec 08, 2005 1:21 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n omp wrote:    codergeek42 wrote:   Likewise.  I was almost going to move this to Unsupported Software.  But isn't that a support forum...  no, it just hasn't got a ceiling_________________Since the bible and the church are obviously mistaken about where we came from, how can we trust them with where we're going?&#13;\n\n\n"An eye for an eye will make us all blind" - Gandhi&#13;\n\n\nCold is gods way to tell us to burn more Catholics\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>codergeek42</post_author>
+      <post_posted>Thu Dec 08, 2005 5:42 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Dec 08, 2005 5:42 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n omp wrote:    codergeek42 wrote:   Likewise.  I was almost going to move this to Unsupported Software.  But isn't that a support forum...  Well, not necessarily.  Main Page: Forum Description wrote:   This forum covers all Gentoo-related software not officially supported by Gentoo. Ebuilds/software posted here might harm the health and stability of your system(s), and are not supported by Gentoo developers. _________________~~ Peter: Brony, GNU/Linux geek, caffeine addict, and Free Software advocate.&#13;\n\nWho am I? :: EFF &amp; FSF\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>omp</post_author>
+      <post_posted>Thu Dec 08, 2005 5:58 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Dec 08, 2005 5:58 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nHeh.. I just guessed it's a support forum since it's under 'Assistance' rather than 'Discussion &amp; Documentation'_________________meow.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>codergeek42</post_author>
+      <post_posted>Thu Dec 08, 2005 6:05 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Dec 08, 2005 6:05 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nYeah. _________________~~ Peter: Brony, GNU/Linux geek, caffeine addict, and Free Software advocate.&#13;\n\nWho am I? :: EFF &amp; FSF\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>16</topic_index>
+    <topic_name>Gentoo Forums :: View topic - fdisk screenshots necessary.</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-16-postdays-0-postorder-asc-start-50.html</topic_address>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 1:50 am</post_posted>
+      <post_subject>fdisk screenshots necessary.</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 1:50 am&#160;&#160; &#160;Post subject: fdisk screenshots necessary.\n  \n\n\n\n\n\nextreme newbies may have an issue going through disk partitioning using fdisk when installing gentoo...&#13;\n\n\nI noticed this while helping another gentoo newbie.  Does anybody know how to get some screenshots of this section of the install?  &#13;\n\n\ngentoo docs on gentoo.org are sparse.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>tigerike</post_author>
+      <post_posted>Wed Apr 10, 2002 2:28 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:28 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nnot to seem too down on you, but this is a source distro thats is targeted for sysadmins. that doesn't mean that newbies should not use it, it just means that you will need to get really familiar with the linux documentation resources that are available online. notably http://www.linuxdoc.org/. you can also search google for the documentation site for any specific app that you are having problems with. a really good book wouldn't hurt either, you can read the rute linux guide online: http://rute.sourceforge.net/ or you can buy a printed version from the link on that site.&#13;\n\n\nps. if you think that there needs to be screen shots for the entire install process then maybe you should put some time in to learn all the different parts of it and develop a visual newbie guide, im sure that there are others that would be happy you did.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 2:33 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:33 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nyeah.. i understand that disclaimer and the blatancy of the developers of gentoo saying that it's targeted towards sysadmins (of which one i am).&#13;\n\n\nhowever, that doesn't mean that those who use it cannot turn it around and try to have it make some sense to those who are newbies.   installing gentoo can be educational to those who slap in a redhat cd and watch it install in 15 minutes...and the speed payoffs are worth it too.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Wed Apr 10, 2002 2:46 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:46 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nPartitioning is simpler then say setting up a kernel correctly.  If you can't get the partition set then gentoo isn't going to get any easier as you go on.  I mean, if they can't use fdisk, what are they gonna do after they reboot for the first time and they are dropped at the login prompt, with no GUI installed yet....&#13;\n\n\nI think cfdisk would be better for a newbie to use then full blown fdisk.  Maybe we should have a newbie build, and keep it seprate from the real build that only talks about what is needed to get Gentoo running._________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Vlad</post_author>
+      <post_posted>Wed Apr 10, 2002 4:52 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:52 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI agree with nitro; cfdisk is a better choice than fdisk.  Personally, I hate fdisk.  Yes, I can use it, yes, the system is geared towards experienced linux users - but that's not a reason not to make something as basic as partitioning your hard disk such a length process.  I don't need (or want) some wizard to do it for me, but at the same time, cfdisk is a lot easier (and faster) than fdisk.  There's just no reason to make something tedious because a system is geared towards experienced users.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 4:59 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:59 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI've never used cfdisk... what are the benefits? how can you use it instead of fdisk when fdisk is the only one provided with isolinux?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>swales</post_author>
+      <post_posted>Wed Apr 10, 2002 10:43 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 10:43 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\ncfdisk is friendlier...having menus and such...oh and a list of the numerical codes for partition types!  \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 11:15 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 11:15 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nis cfdisk provided on the bootable gentoo cdrom?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>mkeadle</post_author>
+      <post_posted>Thu Apr 11, 2002 3:37 am</post_posted>
+      <post_subject>NFN</post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 3:37 am&#160;&#160; &#160;Post subject: NFN\n  \n\n\n\n\n\nDoes it really seem like a good idea to come to Gentoo as a newbie? Hopefully, anyone involved with Gentoo as a user has at least checked out their website. And after checking out their site you're going to realize that installing is not nearly as easy as other distributions. As a matter of fact, partitioning with fdisk is one of the easier steps IMHO.&#13;\n\n\nThere are certain things you need to feel comfortable with before you start dealing with something like Gentoo, or with Linux period. Yes, of course I believe Linux is much better than other Op systems, but I will not in good faith recommend it to everyone.&#13;\n\n\nNow, the only reason I'm saying this is to add to the thread and spark the idea. This isn't necessarily how I feel about it. Flame on!\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>thedistance</post_author>
+      <post_posted>Thu Apr 11, 2002 11:19 pm</post_posted>
+      <post_subject>One size does not fit all</post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 11:19 pm&#160;&#160; &#160;Post subject: One size does not fit all\n  \n\n\n\n\n\nI don't think that they should change Gentoo to make it easier for newbies. There are plenty of distros out there that are making a "better windows" so why make another? If someone wants to put in the effort to learn enought to run gentoo then good for them, but if they want a nice gui handed to them then maybe they should look at one of the other 100 distros that are doing that. There is a reason that debian, slackware, and openbsd from the bsd side of the house are solid it's because they don't try to please everyone. Please lets not push this to become the same as every other "one size fits all" distros.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Thu Apr 11, 2002 11:50 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 11:50 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI *don't* think they should change Gentoo one bit.  It's a unique distributation with unique implications.  I know I feel really proud of my linux box knowing that it's as optimized as possible and can be managed with 2-3 commands at a time.  However, I believe that a community can make it easier for anybody (including super Linux newbies) to get onboard with Gentoo.  &#13;\n\n\nI consider myself a Linux hobbyist with haphazard knowledge of the operating system.  I found the Gentoo installation guide very informative and educational albeit a little confusing since some instructions didn't parallel properly with what I was experiencing.  &#13;\n\n\nI plan on writing up various how-tos for the complete newbie to take advantage of all that Gentoo has to offer because it *is* possible with proper communication.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>fghellar</post_author>
+      <post_posted>Fri Apr 12, 2002 4:09 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Apr 12, 2002 4:09 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nMaybe this is just a matter of putting together a boot disk/cd with some of the graphical partitioning tools available out there (e.g. from Mandrake, Icepack, etc.) -- there are some very nice -- and, perhaps, also some other "pretty-looking", user-friendly tools.&#13;\n\n\nBut, personally, I don't think this is a good idea. IMHO, someone who uses Gentoo Linux at home is by definition a system administrator. And, as such, he/she just has to know how to mount, unmout, partition, mkfs, fsck, and so on by heart (and by hand, if needed).&#13;\n\n\nJust my opinion, though... \n\n\n[]'s&#13;\n\nFelipe\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Fri Apr 12, 2002 8:49 pm</post_posted>
+      <post_subject>I think....</post_subject>
+      <post_text>\n\nPosted: Fri Apr 12, 2002 8:49 pm&#160;&#160; &#160;Post subject: I think....\n  \n\n\n\n\n\nI think that creating a newbie install for Gentoo is fine, but don't dump the load on the main developers.  If someone would like to create a hand holding guide go for it, lets just keep it off to the side, and out of the main focus of Gentoo.&#13;\n\n\nIf someone wants to write a bunch of newbie howto's in the newbie forum, go ahead and do that, if we get enough, perhaps I should create a new forum where only specific members can post stuff like newbie help and keep that forum to strictly guides.&#13;\n\n\nThe replies show that some people are for it, other against it.  If people that are for it want to do it, go ahead, I'm sure people will appreciate it.  For others, I don't think it should bother you(us?) much as long as just the meat and not the fluff is kept on the main Gentoo website._________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Fri Apr 19, 2002 7:27 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Apr 19, 2002 7:27 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nFunny to see almost every neewbee question answered with a whole discussion on wether or not neewbees should be allowed near a gentoo box or not.&#13;\n\n\nstop it. &#13;\n\n\nnewbees tell you were the problems lie, that are not apearend to all but the most experienced guru's (like yourselves)&#13;\n\n\ni also hate fdisk. it doesn't even let you see the future partitions sizes in Mbites. (not easily) only in cylinders. it's too crude and complex for its purpose:  "make 3 partitions of the following sizes and file systems."&#13;\n\n\ncfdisk is easy.  i like it.  i want it in a future bootdisk.&#13;\n\n\n\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>c_kuzmanic</post_author>
+      <post_posted>Fri Apr 19, 2002 7:46 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Apr 19, 2002 7:46 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nThe question is not wether newbies are allowed near Gentoo boxes, but rather if they are able to run/administer/configure/install  it.  If you want to be a car mechanic you'll have to take classes in basic mechanics relating to automotive engineering. If you want to run Gentoo, you should be familiar with linux and it's basic functionality. From that perspective, I don't think that Gentoo is a good way for a newbie to start learning about linux, but that holds true only for Gentoo in its current form. I'm absolutely sure that Gentoo will evolve to the point where any newbie willl be able to install it easily, but that's in the future. For now, I would encourage any newbie to try some other, easier distro like Mandrake first and then come back to Gentoo.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Flake</post_author>
+      <post_posted>Fri Apr 19, 2002 8:38 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Apr 19, 2002 8:38 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nthe guest above was me, not logged in.&#13;\n\n\nI started with mandrake (7.0)  a.a.m.o.f.. &#13;\n\nI hated it within day's. something with cups not working, speed issues, etc etc.&#13;\n\n\nthey had this (great) forum with "experts", and i spend two days there. at some point one of the experts gave me the best peace of advice:&#13;\n\n\nget slackware 8.0, and come to a dutch forum, where he also spend a lot of time. &#13;\n\n\nhad some trouble with the rough edges at first. but now i also can give a litle advice now and then. I got to learn the hard way, and don't regret one moment of it. \n\n\nI admit, i don't think gentoo is ready/suitable for the complete newbee, but it is a broad term. I'm 1,5 year into linux and quite a geek by nature.&#13;\n\nBut i still consider myself newbee.&#13;\n\n\nAnd i still want to be able to run gentoo, without unnescecairy hassles. K.I.S.S. its already difficult enough.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>chardros</post_author>
+      <post_posted>Fri Apr 19, 2002 2:24 pm</post_posted>
+      <post_subject>novices, fdisk, gentoo, and kitchen sinks</post_subject>
+      <post_text>\n\nPosted: Fri Apr 19, 2002 2:24 pm&#160;&#160; &#160;Post subject: novices, fdisk, gentoo, and kitchen sinks\n  \n\n\n\n\n\nOK.  This thread is a bit strange.  I'm new to gentoo.  I've used Linux in the form of various distros, and other unices for 6+ yrs now.  For those 6 years, RedHat was my primary distibution - I even went to N.C. to pick up there cert. when they started offering them.  Why RedHat?  It worked.  Building up a system to perform a task was never a problm.  It was RedHat - everything was there for it.  &#13;\n\n\nWhy am I switching to gentoo?  It works.  Do I miss the GUI install and hold-my-hand wizards offered by RedHat?  No.  Not one bit.  Do I need cfdisk?  C'mon people.  There are more important things than this.  If it really tears you up to type n, p, 1, &lt;enter&gt;, +1024M to establish a new partiton... maybe gentoo isn't for you.  The gentoo distribution has been built with more than just a sysadmin in mind.  It's been built with the "cluefull" in mind.  It's simple and complex.  That' the allure.  And that's why it will attract the people that LIKE the simplicity of fdisk as opposed to "Disk Druid (tm)".  People who don't need an X desktop to guide them through an install.  People who are comfortable with Makefile options, and the idea of sandboxes for compilations.  &#13;\n\n\nThe system is wonderful.  Portage is already great and sounds to be getting better.  This is where the work needs to be done.  I agree with the posters above.  You want GUI install tools and Mandrake-like whatever fo gentoo... create it.  Nothing wrong with an *alternate* install image.  It *needs* to stay alternate.  And the developers behind gentoo need not be bothered by this.  They get sucked into this, become a source-based Mandrake... and well, they'll lose everything they've got goin for them... which at this point is a hell of a lot.&#13;\n\n\nA litle more than my $0.02, take it for what it's worth.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>prolific</post_author>
+      <post_posted>Fri Apr 19, 2002 5:43 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Apr 19, 2002 5:43 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n swales wrote:   cfdisk is friendlier...having menus and such...oh and a list of the numerical codes for partition types!   \n\n\nHmm, FDISK also tells you the numerical codes for the partition types.&#13;\n\nYou type "l" for the known partition type codes. \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>bbibber</post_author>
+      <post_posted>Sat Apr 20, 2002 8:31 am</post_posted>
+      <post_subject>why not include them ??</post_subject>
+      <post_text>\n\nPosted: Sat Apr 20, 2002 8:31 am&#160;&#160; &#160;Post subject: why not include them ??\n  \n\n\n\n\n\nSome sections like eg. soundcard installation are well described, others are for experienced users.  Why not put 'newbie links' into the docs so experienced users aren't bothered with screenshots and newbies find what they look for? &#13;\n\nThe main problem is to keep the docs/manpages updated (a task in wich *BSD's succeed better imho).  I hope gentoo preforms better in this area.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>lodger</post_author>
+      <post_posted>Sun Apr 21, 2002 4:10 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 21, 2002 4:10 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI'm a linux newbie. I installed MD8.1 and lost MSWin on grub install. But MD worked so I said&#13;\n\n"forget windows". I heard about Gentoo late last year and finally got up the nerve to burn&#13;\n\nthe iso in late March. Gentoo is now installed and working great. There was a lot of head&#13;\n\nscratching involved but the experience was a blast. The "little gray cells" got a major workout.&#13;\n\nGentoo "feels"  very stable as compared to MD or even Win ( no blue screens of death).&#13;\n\nThanks to D. Robbins and crew. &#13;\n\n\nRoger\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Sat Apr 27, 2002 8:23 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Apr 27, 2002 8:23 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nHow arrogent is this? "Sorry, you're a newbie so piss off! You can't be in *MY* club."&#13;\n\n\nHumble yourselves for those of us who *gasp* want to learn.&#13;\n\n\nChardros, you say that "If it really tears you up to type n, p, 1, &lt;enter&gt;, +1024M to establish a new partiton... maybe gentoo isn't for you."  Does it eat at you whenever a person with less knowledge and experience than you asks for your help? :rolleyes:  Does it "tear you up" to write a HOWTO on how fdisk works? Or are you conent to stand on your high horse and piss on those beneeth you.&#13;\n\n\nFor the past year and a half I've been using RedHat as my main Linux learning environment. Scoff all you want, but on the whole, RedHat users are friendlier and more apt to help those who need help.&#13;\n\n\nNow then. If this is a "server" distribution, then why does it have memory hog packages such as KDE and various "non-server-esque" packages? :rolleyes: Puh-leez. This distribution is whatever the end-user wants to use it for.  Webpages? Fine, get apache.  Windows clone? Fine. Get KDE 3 and the various Office type applications.  Passing Gentoo off as a "server-only" and only worthy of sysadmins and people who know every parameter, every error code and every nuance of every program is selfrighteous bullshit.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>bob_t</post_author>
+      <post_posted>Sat Apr 27, 2002 9:20 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Apr 27, 2002 9:20 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Anonymous wrote:   How arrogent is this? "Sorry, you're a newbie so piss off! You can't be in *MY* club."&#13;\n\n\nHumble yourselves for those of us who *gasp* want to learn.&#13;\n\n \n\n\nAnti-n00b arrogance isn't cool, but Gentoo strikes me as a distro that isn't *for* newbies.  I think that newbies coming to this distro is just fine -- let them come.  The problem with them coming is that it isn't exactly the easiest distro to dig into if you're fresh off windows and with zero linux experience.   I have no problem with newbies coming and asking questions and trying to learn.  That's how we all learn.  (But I do get tired of the repeat RTFM questions, like "why can't I su?")&#13;\n\n\nAnyway, the distro shouldn't be dumbed down for newbies.  As an experienced user, I like the directness of fdisk;  I like that my config files don't get overwritten automatically;  I like that everything is compiled on my machine with my settings.  In other words, I like not having to use a GUI to do all of my configuration;  I like knowing *exactly* what's on this machine, why it is there, and knowing that I put it there.  If I felt otherwise, I'd still be using SuSE or Mandrake or something.&#13;\n\n\nMy point here is that if you need a graphical disk partitioning tool because fdisk is "too hard," this probably isn't the right distribution for you.  Accept that, get over it, and drag out your copy of DiskDrake or something -- and I mean no offense, Mandrake is a fine, fine product, but just not one that's right for me.  There's no reason that Gentoo, IMNSHO, should be forced into being the right distro for "everybody."\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>fghellar</post_author>
+      <post_posted>Sat Apr 27, 2002 10:16 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Apr 27, 2002 10:16 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Anonymous wrote:   How arrogent is this? "Sorry, you're a newbie so piss off! You can't be in *MY* club." \n\n\nIt's absolutely not like this.&#13;\n\n\nMy point is: you should not try to run if you cannot stand up by yourself yet. This is simply the natural way. Children first learn to crawl. Then they learn to stand up and start walking. Only then, they start running. And they fall to the ground and hurt themselves several times before they learn it right.&#13;\n\n\nGentoo is like running. I really believe one should know the basic admin tasks before trying Gentoo. What I would call a Gentoo-newbie is by no means the same as a Linux-newbie. It's really ok for a Linux-newbie to ask "How can I access my Windows partition from Linux?", but IMHO a Gentoo-newbie should be answering that instead of asking.&#13;\n\n\nGentoo is not a "restrictive club" at all. It's just not the right place for a totally begginer to start learning the Linux way._________________| www.gentoo.org | www.tldp.org | www.google.com |\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>celtic_hack</post_author>
+      <post_posted>Sat Apr 27, 2002 10:52 pm</post_posted>
+      <post_subject>Re: novices, fdisk, gentoo, and kitchen sinks</post_subject>
+      <post_text>\n\nPosted: Sat Apr 27, 2002 10:52 pm&#160;&#160; &#160;Post subject: Re: novices, fdisk, gentoo, and kitchen sinks\n  \n\n\n\n\n\n chardros wrote:    Do I need cfdisk?  C'mon people.  There are more important things than this.  If it really tears you up to type n, p, 1, &lt;enter&gt;, +1024M to establish a new partiton... maybe gentoo isn't for you.  ...&#13;\n\nthis, become a source-based Mandrake... and well, they'll lose everything they've got goin for them... which at this point is a hell of a lot.&#13;\n\n \n\n\nI am a Gentoo newbie. Not sure if I would consider myself and "admin". I have an internet server [ok a dedicated busybox, not on my home connection]  and several PCs running various Linuxes.&#13;\n\n\nI also prefer to use X and GUI tools. I use command line when I must. Not everyone likes to work in cryptic mode. I thought gentoo was aboout choice. I don't see anything wrong with a "souce based Mandrake". Mandrake is bloated but it is stable (mostly) and competent (mostly).&#13;\n\n\nBTW. I somehow screwed up my initial install and couldn't get gentoo to load on multiple partitions. Even though I have successfully installed LFS on a multi-partition system.  So it wouldn't hurt to have more instructions for those who want/need them. Newbies can help to indicate weak spots in a system. Of course, I am not referring to those who refuse to RTFM before asking for help.&#13;\n\nThere is a difference between "newbie" and "clueless"&#13;\n\n\nOverall this distro ROCKS!_________________Celt&#13;\n\n\nOne OS to rule them all ...\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Xomgromit</post_author>
+      <post_posted>Tue Apr 30, 2002 3:05 pm</post_posted>
+      <post_subject>Gentoo - Installed (Newbie on the scene)</post_subject>
+      <post_text>\n\nPosted: Tue Apr 30, 2002 3:05 pm&#160;&#160; &#160;Post subject: Gentoo - Installed (Newbie on the scene)\n  \n\n\n\n\n\nI'd just like to say, some of us determined newbies, may come to the scene. Of course it took me 4 days to install and get Gentoo running, but its the first time I've worked so hard, so I feel the payoff it's a well deserved one. I've not messed with linux for over 2 years, and even then it was hard to install, and I never completed the install...Gentoo is MY VERY first! and I mean first, full Linux install....So I though I'd just shout out to all the Gentoo users, it's possible for a newbie in Linux to install Gentoo.....I've messed with dos and windows since I was 9, and I'm 21 \n\nSo to all it's possible for a newbie to install from the documentation without anymore help \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>fghellar</post_author>
+      <post_posted>Tue Apr 30, 2002 3:26 pm</post_posted>
+      <post_subject>Re: Gentoo - Installed (Newbie on the scene)</post_subject>
+      <post_text>\n\nPosted: Tue Apr 30, 2002 3:26 pm&#160;&#160; &#160;Post subject: Re: Gentoo - Installed (Newbie on the scene)\n  \n\n\n\n\n\n Xomgromit wrote:   I've messed with dos and windows since I was 9, and I'm 21 \n\nThis tells me you're not a newbie... You must have a lot of experience with computers... In your case, installing Linux would be just a little more complicated than installing and trying a new app. Ain't I right? _________________| www.gentoo.org | www.tldp.org | www.google.com |\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>BradN</post_author>
+      <post_posted>Tue Apr 30, 2002 4:26 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 30, 2002 4:26 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI agree with the point that if people don't know how to use fdisk, that they're probably going to run into more problems later, but... at the same time I think there's a lot of people that could learn fdisk or [insert any part of the installation] except that it takes them more time to do so than if there were an easier way that would just 'get it done'.&#13;\n\n\nWhat I'm trying to ask is why should we force people to learn how to do all of this stuff by hand, if there's an easier way that's (in most cases) just as good at accomplishing the given task.  I for one, would like an automated config file merger utility that would let you compare the old and new config files side by side and make the necessary adjustments, then hit OK and go on to the next file.  It is a slight annoyance to have an "emerge -u world" finish and then have to look at 15 config files manually just to make sure nothing needs to be updated.&#13;\n\n\nIt's the same kind of thing with fdisk - they're only going to partition stuff once when they install, so why force people to do it in a way that would probably be slower for them?  Even a handholding installer like mandrake's wouldn't be a terrible thing.  I know I'm not going to remember how to install again unless I look at the guide anyway.  Most of the difficulty in getting gentoo running compared to other distro's is the time it takes to set up the system to start installing/compiling.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>ManicMailman</post_author>
+      <post_posted>Thu May 02, 2002 1:26 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu May 02, 2002 1:26 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nwell heres my story:&#13;\n\ni had windows for a few years, switched to mandrake for about a month, and then tried gentoo.&#13;\n\nsure it was hard and it took awhile, but i finished it my first try successfully.&#13;\n\nas for fdisk, while i was somewhat confused, i got through it fine.&#13;\n\nbasically, there can be newbies trying gentoo without specific documentation. just let people take the dive and try to work through the install on their own.  sure i wouldve gotten through the install much faster with someone holding my hand, but i learned alot, and it was all worth it in the end. besides, the newbies who get their hands held are the ones who will ask all the RTFM questions.&#13;\n\n\n^--my $.02\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>kavel</post_author>
+      <post_posted>Thu May 02, 2002 2:14 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu May 02, 2002 2:14 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n BradN wrote:   \n\nWhat I'm trying to ask is why should we force people to learn how to do all of this stuff by hand, if there's an easier way that's (in most cases) just as good at accomplishing the given task.  I for one, would like an automated config file merger utility that would let you compare the old and new config files side by side and make the necessary adjustments, then hit OK and go on to the next file.  It is a slight annoyance to have an "emerge -u world" finish and then have to look at 15 config files manually just to make sure nothing needs to be updated. \n\nJust for your information, there is a utility called etc-update in gentoolkit that does exactly what you're suggesting here. Just do  Code:   emerge gentoolkit  and then use etc-update whenever portage says there are config files to update.&#13;\n\n\nKavel\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>BradN</post_author>
+      <post_posted>Thu May 02, 2002 3:31 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu May 02, 2002 3:31 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI suppose it helps knowing that kind of stuff \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>StrCrssd</post_author>
+      <post_posted>Fri May 03, 2002 5:58 am</post_posted>
+      <post_subject>Gentoo - BSD in a linux package</post_subject>
+      <post_text>\n\nPosted: Fri May 03, 2002 5:58 am&#160;&#160; &#160;Post subject: Gentoo - BSD in a linux package\n  \n\n\n\n\n\nYes, I'm overgeneralizing.  &#13;\n\n\nHowever, I think we have a lot to learn from the fine BSD folks.  I am a linux newbie.  I came to unices about 8 months ago, first installing SuSe (and hating it), then moving to FreeBSD because of the wonderous ports system.  Why?  Ports worked.  It stopped dependency hell.  I was able to compile programs like Gabber and have them actually work!  By golly, it was wonderful.  I came to Gentoo because it offers virtually the same thing (portage) and it also offers drivers for my nvidia card (accelerated even!).&#13;\n\n\nComing from someone who's been in the *nix world for only 8 months, the only hesitation I had when doing a gentoo install was the fdisk.  I had never before used actual "fdisk", always cfdisk or some proprietary solution.  Now,  when installing Gentoo, I had about 80 gb of partially edited video on the drive, and wanted to make damn sure not to lose it.  It was a tense moment when I ordered fdisk to write changes.  I was very concerned for the many hours I had worked on that video data.  Paritioning is potentially destructive, it needs a tool that not only makes the user aware of that, but is intuative to a user who has had experience in partitioning.  fdisk does not provide either of these things.  cfdisk is better for this circumstance.  &#13;\n\n\nAside from that, I have no problem with gentoo being a distribution tailored for each machine it is installed onto, and the config files and obscure utilities to prove it!&#13;\n\n\nA quick suggestion, might be a good idea to mention gentools in the installation hand-holder.  I would have never heard of it except from these forums.&#13;\n\n\n--StrCrssd\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Fri May 03, 2002 1:39 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri May 03, 2002 1:39 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nWhy did the UNIX users at our company switch from RedHat as a desktop O/S to Gentoo? I believe the #1 reason was that we felt RedHat has been getting further and further away from our vision of a UNIX system, starting with the obfuscated layout of /etc. It took too long to figure out how any given part of the O/S was configured, unless we used RedHat's configuration tools. We've all been living UNIX for &gt;12 years, and see all the desktop fluff more as novelty than as a requirement, so a sane configuration layout is essential. It's not that we couldn't figure it out, it's that we felt we already knew how it should work.&#13;\n\n\nWhich brings us to Gentoo, or the BSD variants, or even Solaris (to some extent). Any of these still have that UNIX vibe, and files are where I expect them to be. And no, I don't need a damn curses/Motif/GTK/Qt GUI to partition a drive, because I have the ability to add one number to another. I can even subtract, if so required. Wow.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>dvNuLL</post_author>
+      <post_posted>Fri May 03, 2002 9:24 pm</post_posted>
+      <post_subject>Fdisk, cfdisk and other stuff :)</post_subject>
+      <post_text>\n\nPosted: Fri May 03, 2002 9:24 pm&#160;&#160; &#160;Post subject: Fdisk, cfdisk and other stuff :)\n  \n\n\n\n\n\nWell I for one can use both fdisk or cfdisk. I have a preference to cfdisk due to the curses based gui. It still requires u to know how to partition but at least you dont have to hit p after every change to see the reflected changes. It shows up after u make it. &#13;\n\n\ndvNuLL_________________-= Life is better at /dev/null =-\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Fri May 24, 2002 2:45 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri May 24, 2002 2:45 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nJust a thought that has already been posted in this thread prolly several times. A how-to needs to be writen for fdisk. When I was dealing with it getting my partitions set up I had no idea how to get the size set in mb and ended up with a huge boot and swap partition. LOL, I look back on it now and laugh but it really sucked man. It would take a fast typer all of 20 minutes to type something up with all the details. Is that to much to ask? Would 20minutes out of a day be to much time spent know all the people that it would help? Hell I'd do it but I don't know enough about it to type something, that and I am a slow typer \n\n\nMy personal feeling on fdisk is that it was a bad choice for a partitioning utility and one of the things that I fell wasn't payed enough attention to. Either a better program should have been chosen or instructions included. Mainly how to set size using mb  apparently its just +1024M but I had no idea at the time, hehehe.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>huw</post_author>
+      <post_posted>Fri May 24, 2002 8:06 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri May 24, 2002 8:06 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Quote:   A how-to needs to be writen for fdisk \n\n\nI think this comment and some of the responses above show the reasons Kurt's sig is  Quote:   Standard Answers: Read the Docs, Search the Forum, Search Google  \n\nSysadmins and *NIX gurus on this forum will help newbies, as they remember how useful it was to be helped in the dim distant past when they were new to linux. However, as the popularity of gentoo grows and more and more questions that can be helped with an unfirendly RTFM crop up, they're going to be less helpful. Maybe this wond be a problem as ex-newbies become more knowledgable they'll help the new newbies.&#13;\n\n\nWith tools like google and google.grups (Deja) It really is very easy to get help. The above example is a case in point. To illustrate this go to www.gooogle.com/linux and searche for Fdisk How-to. Hit one is a tutorial called Using fdisk on www.linuxneewbie.org. It explains everything in great detail - and best of all it shows how the built in help in fdisk can make the process remarkably simple.&#13;\n\n\nGentoo is a great distro. It's not newbie friendly, but there's no reason a newbie can't use it, as long as they are willing to try to find solutions to their problems by RTM and STW before crying out for help.&#13;\n\n\nJust my $ 0.02  \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Chris Hickman</post_author>
+      <post_posted>Fri Jun 21, 2002 8:58 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Jun 21, 2002 8:58 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI just completed my first Gentoo install, after having installed and played around with Mandrake (8.1 and 8.2) and Red Hat (7.1 and 7.2). I was, and still am, a Linux newbie.&#13;\n\n\nHowever, the advertised speed and control benefits of running Gentoo intrigued me, as a power user in Windows. I read over the install guide and decided it was pretty clear-cut, and I also have a couple of books lying around to help me out.&#13;\n\n\nI fucked up a couple times, the install burped a couple of times, I politely asked questions here and at irc.openprojects.org #gentoo, and I got it installed. I didn't bitch and moan about it the software not meeting MY needs, I did what I had to do and learned what I needed to know to get it installed. Like other people said, if you want an easier install process, write it yourself or get another distro; don't expect someone else to do it for you.&#13;\n\n\nThat being said, I think that there are a few improvements that could make it better for all involved, not just newbies. I think that a menu-driven partition manager would be great (even the Kernel has a menu!). I think that, at this point where we are stuck between two versions of gcc, a menu (or at least a question, y or n) somewhere giving you the choice between 2.9x and whatever the stable version of 3.xx might be at the time would be nice. Another nice addition would be if Gentoo could tell you the approximate time it's going to take to compile whatever you happen to be compiling, so that those of us that are home for an extended period of time don't have to camp out in front of the PC, but can return within a few minutes of completion to keep the ball rolling. Other than that, I think it's very clear-cut and not difficult if you know your hardware and RTFM \n\n\nChris\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>Swishy</post_author>
+      <post_posted>Sat Jun 22, 2002 12:00 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 12:00 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nHaving only been using linux, myself for about 6 month's and deciding to do a Gentoo install i found with the dos/windows knowledge I had previously it was just a matter of using the help commands to work out the differences ...I mean fdisk command is used in DOS and it doesnt take much to work out the differences between using the dos version and the text based *nix version...I think as far as the newbie install is concerned the DOC's are more than adequite and the forums are fantastic....I say leave fdisk as it is  as it keeps things happy from either view point......(just my 2 cents worth  )_________________Theres no substitute for C.I.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>BinaryAlchemy</post_author>
+      <post_posted>Sat Jun 22, 2002 12:52 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 12:52 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n3 points:&#13;\n\n Noob bashing is not cool. It hurts linux, it hurts gentoo, and it makes you look like an egotistical fool.&#13;\n\n\n Adding cfdisk (how the hell did we get back on this?) isn't just a good thing for noobs, it's a good thing for sysadmins who don't like to break out the calculator/scratch paper to partition their hard drive. Just because I know how do partition it with a hex editor doesn't mean I should to do it that way.&#13;\n\n\n Slackware, IMHO the most noob unfriendly distro (and the best way to learn linux), has cfdisk on their install cd.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>tomte</post_author>
+      <post_posted>Sat Jun 22, 2002 12:55 am</post_posted>
+      <post_subject>Re: fdisk screenshots necessary.</post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 12:55 am&#160;&#160; &#160;Post subject: Re: fdisk screenshots necessary.\n  \n\n\n\n\n\n niyogi wrote:   extreme newbies may have an issue going through disk partitioning using fdisk when installing gentoo...&#13;\n\n \n\n\n&lt;RANT_ON&gt;&#13;\n\nI'm sick of this&#13;\n\n\nif you can't read, you shouldn't attempt to install gentoo&#13;\n\n&lt;repeat times="1000"&gt;&#13;\n\nif I don't know how to read,  I shouldn't attempt to install gentoo&#13;\n\n&lt;/repeat&gt;&#13;\n\n\nI used fdisk in 1994, I used it to install gentoo 2002, &#13;\n\n\nit is fast to use&#13;\n\nit is stable&#13;\n\nit isn't hard to learn&#13;\n\n\n&lt;repeat times="1000"&gt;&#13;\n\nif I don't know how to read,  I shouldn't attempt to install gentoo&#13;\n\n&lt;/repeat&gt;  &#13;\n\n&lt;/RANT_ON&gt;&#13;\n\n\nthanks for coping with this,&#13;\n\nI normaly dont write stuff like this, but the fuzz about fdisk just gets on my nerves,...what (the f***) is so hard in writing +10G?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>delta407</post_author>
+      <post_posted>Sat Jun 22, 2002 1:11 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 1:11 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n tomte wrote:   what (the f***) is so hard in writing +10G? \n\n\nPrecisely. You don't need a hex editor, you don't need a pen and paper. Say you have a 20 GB drive, and you want a 64 MB boot, a 512 MB swap, and the rest for /. How do you do that?&#13;\n\n\n Code:   # fdisk /dev/hda&#13;\n\nBuilding a new DOS disklabel. Changes will remain in memory only,&#13;\n\nuntil you decide to write them. After that, of course, the previous&#13;\n\ncontent won't be recoverable.&#13;\n\n\n\nCommand (m for help): m&#13;\n\nCommand action&#13;\n\n&#160; &#160;a&#160; &#160;toggle a bootable flag&#13;\n\n&#160; &#160;b&#160; &#160;edit bsd disklabel&#13;\n\n&#160; &#160;c&#160; &#160;toggle the dos compatibility flag&#13;\n\n&#160; &#160;d&#160; &#160;delete a partition&#13;\n\n&#160; &#160;l&#160; &#160;list known partition types&#13;\n\n&#160; &#160;m&#160; &#160;print this menu&#13;\n\n&#160; &#160;n&#160; &#160;add a new partition&#13;\n\n&#160; &#160;o&#160; &#160;create a new empty DOS partition table&#13;\n\n&#160; &#160;p&#160; &#160;print the partition table&#13;\n\n&#160; &#160;q&#160; &#160;quit without saving changes&#13;\n\n&#160; &#160;s&#160; &#160;create a new empty Sun disklabel&#13;\n\n&#160; &#160;t&#160; &#160;change a partition's system id&#13;\n\n&#160; &#160;u&#160; &#160;change display/entry units&#13;\n\n&#160; &#160;v&#160; &#160;verify the partition table&#13;\n\n&#160; &#160;w&#160; &#160;write table to disk and exit&#13;\n\n&#160; &#160;x&#160; &#160;extra functionality (experts only)&#13;\n\n\nCommand (m for help): n&#13;\n\nCommand action&#13;\n\n&#160; &#160;e&#160; &#160;extended&#13;\n\n&#160; &#160;p&#160; &#160;primary partition (1-4)&#13;\n\np&#13;\n\nPartition number (1-4): 1&#13;\n\nFirst cylinder:&#13;\n\nSize: +64M \n\n\nKeystrokes only from this point:&#13;\n\n Code:   n &lt;enter&gt;&#13;\n\np &lt;enter&gt;&#13;\n\n2 &lt;enter&gt;&#13;\n\n&lt;enter&gt;&#13;\n\n+512M &lt;enter&gt;&#13;\n\nn &lt;enter&gt;&#13;\n\np &lt;enter&gt;&#13;\n\n3 &lt;enter&gt;&#13;\n\n&lt;enter&gt;&#13;\n\n&lt;enter&gt;&#13;\n\nw &lt;enter&gt;&#13;\n\nq &lt;enter&gt; \n\n\nWas that so hard? Granted, with other partitions on your hard drive, working around them can be not so fun. But -- it says "press m for help". &#13;\n\n\nI'm not trying to bash n00bs, but really, if you can't figure out how to repartition your hard drive with fdisk you've got a serious headache coming your way when your system breaks. Manpages, Google, and the Gentoo docs can all be cryptic... if you can't decrypt fdisk, you probably can't "RTFM" either. Gentoo, as we all know, requires a fair amount of "RTFM"-ing.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>BinaryAlchemy</post_author>
+      <post_posted>Sat Jun 22, 2002 1:41 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 1:41 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nYes, you are noob bashing. If the noob says "this doesn't make sense" and your response is "yes it does stupid, now stop complaining" that's bashing. Also, +xxxM isn't documented in the install instructions or in the help listings inside of fdisk. Do you really think +512M a logical response to "First cylinder:"? And finally, it's much more complicated if you're trying to squeeze a new partition in around your existing ones.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>tomte</post_author>
+      <post_posted>Sat Jun 22, 2002 1:51 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 1:51 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n BinaryAlchemy wrote:    Also, +xxxM isn't documented in the install instructions or in the help listings inside of fdisk. Do you really think +512M a logical response to "First cylinder:"? And finally, it's much more complicated if you're trying to squeeze a new partition in around your existing ones. \n\n Code:   \n\nDisk /dev/hda: 255 heads, 63 sectors, 2501 cylinders&#13;\n\nUnits = cylinders of 16065 * 512 bytes&#13;\n\n\n&#160; &#160;Device Boot&#160; &#160; Start&#160; &#160; &#160; &#160;End&#160; &#160; Blocks&#160; &#160;Id&#160; System&#13;\n\n/dev/hda1&#160; &#160; &#160; &#160; &#160; &#160; &#160;1&#160; &#160; &#160; 2501&#160; 20089251&#160; &#160;83&#160; Linux&#13;\n\n \n\nthere are the cylinder numbers of your existing partitions,&#13;\n\n Code:   \n\nPartition number (1-4): 1&#13;\n\nFirst cylinder (1-2501, default 1):&#13;\n\nUsing default value 1&#13;\n\nLast cylinder or +size or +sizeM or +sizeK (1-2501, default 2501):&#13;\n\n \n\nthere is the +xxxM help&#13;\n\nwhere is the problem?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>delta407</post_author>
+      <post_posted>Sat Jun 22, 2002 1:53 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 1:53 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n BinaryAlchemy wrote:   Yes, you are noob bashing. If the noob says "this doesn't make sense" and your response is "yes it does stupid, now stop complaining" that's bashing. \n\n\nPlease point out where a noob said "this doesn't make sense", and please point out where I said "yes it does stupid, now stop complaining".\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>25</post_page_offset>
+      <post_author>BinaryAlchemy</post_author>
+      <post_posted>Sat Jun 22, 2002 2:07 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jun 22, 2002 2:07 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nSorry if that came on to strong, it wasn't directed entirely at you. But yes, "what (the f***) is so hard in writing +10G?" (which you quoted an affirmed) is equivalent to "yes it does stupid, now stop complaining".\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>12</topic_index>
+    <topic_name>Gentoo Forums :: View topic - Gentoo was slashdotted!</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-12-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Wed Apr 10, 2002 12:45 am</post_posted>
+      <post_subject>Gentoo was slashdotted!</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 12:45 am&#160;&#160; &#160;Post subject: Gentoo was slashdotted!\n  \n\n\n\n\n\nCheck this out:&#13;\n\nhttp://slashdot.org/features/02/04/05/0536226.shtml?tid=106\n\n\nPretty cool   \n\nMaybe that is why there has been an explosion in the number of users in #gentoo?  Maybe more to come?_________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Ozymandias</post_author>
+      <post_posted>Wed Apr 10, 2002 11:38 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 11:38 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nyep, saw it too,&#13;\n\n\npretty cewl, but I am an original: downloaded my first gentoo version about 1 months ago.  \n\n\ngreetz Ozy\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Wed Apr 10, 2002 4:07 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:07 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nThere was a boom a few weeks ago, there was another post on slashdot, when 1.0 was out..&#13;\n\n\nI'm original like Ozymandias, downloaded gentoo a few monts ago _________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tvon</post_author>
+      <post_posted>Thu Apr 11, 2002 1:38 am</post_posted>
+      <post_subject>4 or 5 counts I think...</post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 1:38 am&#160;&#160; &#160;Post subject: 4 or 5 counts I think...\n  \n\n\n\n\n\nIIRC, when I installed Gentoo (late November) #gentoo normally had around 30 people in it, sometimes as few as 15 or so.  &#13;\n\n\nSome point later, Gentoo was mentioned on some website that does distro-reviews, and the average people jumped to about 50.&#13;\n\n\nShortly afterwards, Gentoo was mentioned on /., attendance jumped to the 100 mark.&#13;\n\n\nShortly after that, Gentoo was mentioned on /. again, and the room grew to around 130....&#13;\n\n\nThen it hit 1.0, was mentiond on /. and Newsforge and dunno where else...and now the room is around 170.....bigger than Red Hat and Mandrake combined last I looked......&#13;\n\n\nSo, there you go...a short, wildly inaccurate (most likely, my memory is shot) summary of the past half-year or so in #gentoo population.&#13;\n\n\n-Tom, who is available for public speaking\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Fri Apr 12, 2002 6:30 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri Apr 12, 2002 6:30 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI had been eyeing gentoo for a while now (having read a lot of the IBM articles by Daniel Robbins but never got around to putting an installation in place. &#13;\n\n\nBut by now, I'm pretty sold on the idea although I don't have *all* the patience necessary to finish the installation.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Cyris</post_author>
+      <post_posted>Wed Apr 17, 2002 5:29 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 17, 2002 5:29 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI am in the process of building it and I think it is the best thing since sliced bread.&#13;\n\n\nWay easier than LFS and BYOL, but you still get the same benefit.&#13;\n\n\nI also like Portage a lot.&#13;\n\n\nWay to go.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Wed Apr 17, 2002 8:04 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 17, 2002 8:04 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nGentoo is far the best distro ever used. I started on RC6 a few months ago and have enjoyed using it. &#13;\n\n\nThe people in the IRC channel is what makes this distro so good. The people are amazing and kind and always willing to help out. &#13;\n\n\nGentoo Rocks baby!!!\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>zagarna</post_author>
+      <post_posted>Wed Apr 17, 2002 9:51 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 17, 2002 9:51 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI started with Gentoo about one month ago, some guy on comp.unix.bsd.freebsd.misc said it was a nice linux distro, I tried it, I got sucked in\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>spooky</post_author>
+      <post_posted>Thu Apr 18, 2002 5:19 pm</post_posted>
+      <post_subject>Gentoo &amp; KDE3</post_subject>
+      <post_text>\n\nPosted: Thu Apr 18, 2002 5:19 pm&#160;&#160; &#160;Post subject: Gentoo &amp; KDE3\n  \n\n\n\n\n\nI found out about Gentoo on slashdot a while back, some passing reference in one  of the posts, a while before the slashdotting. Have been using it for a few months now.&#13;\n\n\nI decided to upgrade to kde3 to check it out. I run Redhat, Mandrake and Gentoo all on the same box. Can you guess which one I was able to upgrade from KDE2 to KDE3 with 1 command line?  \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>handsomepete</post_author>
+      <post_posted>Sun Apr 21, 2002 4:37 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 21, 2002 4:37 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI just got on the Gentoo wagon.  It's neat.  There's nothing like running a big emerge before going somewhere and having it done when you get back.  I'd marry portage if I could.  Or at least casually date it.  Geez, I sure am afraid of commitment.  \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>lude</post_author>
+      <post_posted>Tue Apr 23, 2002 7:12 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 23, 2002 7:12 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Ozymandias wrote:   pretty cewl, but I am an original: downloaded my first gentoo version about 1 months ago.    \n\n\nWhoa, doesn't anyone remember the *LONG WAIT* for 1.0_rc5 to come out? I still thought it was a great distro in it's early days too.&#13;\n\n\nI have a burn of 1.0_rc4 somewhere around here.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>lk42pro</post_author>
+      <post_posted>Thu May 02, 2002 3:15 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu May 02, 2002 3:15 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\ni got into it because i liked the website.....its the coolest linux website i know.._________________"I am a wanderer, It's time for me to wander again"\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>squanto</post_author>
+      <post_posted>Tue May 07, 2002 3:30 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue May 07, 2002 3:30 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI never saw the /. stuff  \n\nI found Gentoo on my own searching google groups for DIY linux distro's and visited the site eairlier this year, along with LFS.  Then I came back like 2 weeks ago got the new 1.1a iso and now have gentoo running on my athlon, my p166, my IBM T22, All but my mac G4 that runs yellow dog, cause I really dont have time to put gentoo on there right now. \n\nI think Gentoo kicks butt.  The install was not the easiest thing in the world, but since I got it right on my first try with my Athlon box, it made my life easier and made me like the distro even more.&#13;\n\n\n-AndrewLast edited by squanto on Wed May 08, 2002 4:19 am; edited 1 time in total\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>AnimalMachine</post_author>
+      <post_posted>Tue May 07, 2002 2:08 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue May 07, 2002 2:08 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI found Gentoo from the links page of Sorcery linux ... I barely beat the slashdot rush (atleast I think I did) by getting in at 1.0rc6.&#13;\n\n\nI've learned a bit, so that's cool. It's too easy to get complacent by knowing a distro too well ... Debian just makes life too easy. LOL\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Mr. Atoz</post_author>
+      <post_posted>Wed May 08, 2002 4:13 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed May 08, 2002 4:13 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI started working with Gentoo a several weeks ago, right after it was Slashdotted and right befor 1.1a.  The farther I got along in the Install, the bigger the GRIN on my face grew. &#13;\n\n\n   \n\n\nI have used Slackware, Mandrake, RedHat and FreeBSD.  I have always been partial to FreeBSD because of the Ports collection, the performance and the fact that it has a much more polished feel about it then any Linux distro I have ever user.  There is a distinct separation between the core OS and other software.  All the Linux distro's I've used do not have this feeling of separation.  Also, RedHat and Mandrake come with WAY too much baggage for my taste.  If I want lots of extra baggage, I'll install Windows. \n\n\nThe way Gentoo handles the runlevels is GREAT!  I am glad to see the mold of rc1-&gt;rc6 evolved into something musch more intuative.  Gentoo is very modern from the base OS to all the ports in Portage.  I find everything to be continually updated and current.  In the xBSD world, ports were usually severall weeks past the release of a piece of software.&#13;\n\n\nGentoo is the perfect marrage of: the cleanliness, speed and ports from xBSD, but BETTER, and the power and gratification of Linux From Scratch, but MUCH easier.  I have learned tons more about Linux by switching to Gentoo.  I AM SOLD.&#13;\n\n\nBTW, if Gentoo ever decides to IPO, please give us as much advance warning as you legally can. &#13;\n\n\n\nThanks very much, and keep up the GREAT work!!!!!!!!!!!!!!!!!!!!! _________________---Atoz\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>TheWart</post_author>
+      <post_posted>Fri May 17, 2002 2:19 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Fri May 17, 2002 2:19 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI found Gentoo about October/November of last year, and it is absolutely amazing.  It cheers me to see all the new users coming on, and enlarging the Gentoo user base by the dozens/hundreds._________________Face it, we are all noobs.&#13;\n\n\nOn the box it said it was designed for Win XP or better, so why won't it work with Linux?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>masseya</post_author>
+      <post_posted>Fri May 31, 2002 3:42 pm</post_posted>
+      <post_subject>gentoo website..</post_subject>
+      <post_text>\n\nPosted: Fri May 31, 2002 3:42 pm&#160;&#160; &#160;Post subject: gentoo website..\n  \n\n\n\n\n\n Quote:   i got into it because i liked the website.....its the coolest linux website i know.. \n\nI have to agree.  The website is really well done.  It's so nice to the user that it made me decide to use gentoo when I was looking for a source based distrobution for linux.  Portage has kept me using it since.  Anyhow, the articles page has a lot of information on the website and the history of gentoo that's really good for anyone who's interested.&#13;\n\n\nhttp://www.gentoo.org/index-articles.html_________________if i never try anything, i never learn anything..&#13;\n\nif i never take a risk, i stay where i am..\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>abhishek</post_author>
+      <post_posted>Sun Jun 30, 2002 4:49 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Jun 30, 2002 4:49 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n niyogi wrote:   I had been eyeing gentoo for a while now (having read a lot of the IBM articles by Daniel Robbins but never got around to putting an installation in place. &#13;\n\n\nBut by now, I'm pretty sold on the idea although I don't have *all* the patience necessary to finish the installation. \n\nWell, u could finish the install quickly by just using a stage3 image. But then yeah, u need sime opatience to getthru the software installations(espically kde and stuff).\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>abhishek</post_author>
+      <post_posted>Sun Jun 30, 2002 4:52 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Jun 30, 2002 4:52 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI never saw the posts on /. found out about it in a post on debianplanet aobut grub. It's a cool distro.\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>17</topic_index>
+    <topic_name>Gentoo Forums :: View topic - Debugger suggestions</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-17-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>jeff</post_author>
+      <post_posted>Wed Apr 10, 2002 2:09 am</post_posted>
+      <post_subject>Debugger suggestions</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:09 am&#160;&#160; &#160;Post subject: Debugger suggestions\n  \n\n\n\n\n\nI'm almost afraid to ask this for fear of starting something, but I'm in the process of learning C++ here on linux instead of using Windows and Visual C++.  I'm currently using VIM and GDB, since it appears that the IDEs like KDEVELOP and ANJUTA are more for the purpose of developing GNOME or KDE applications than for just messing around with simple test programs learning C++.  So am I doing this the easy way or the hard way?  It's working for me, but I'm open to suggestions, and if you think I'm wrong about the IDEs I'd like to hear that too.  Jeff\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tigerike</post_author>
+      <post_posted>Wed Apr 10, 2002 2:36 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:36 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nim not too sure about the ides, i think that the best way to program on *nix is to write your code in a really good text editor. i use nedit it has full syntax highlighting for many languages. then use the command line tools to compile and debug your files\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tobias</post_author>
+      <post_posted>Wed Apr 10, 2002 8:21 am</post_posted>
+      <post_subject>Debugger Suggestions</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 8:21 am&#160;&#160; &#160;Post subject: Debugger Suggestions\n  \n\n\n\n\n\nYou could try using ddd a graphical frontend to gdb which I have found to be very useful in the past...\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Sun Apr 14, 2002 6:31 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 14, 2002 6:31 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nPersonally, I tend to use emacs with syntax highlighting enabled for development, and gdb for debugging. I tried ddd a while ago, and I must say that I hated it. Very slow to load and the gui is counter-intuitive, IMHO anyway. While we're on the subject of gdb, is it me, or is anyone else having trouble upgrading to 5.1.1? I seem to be getting multiple definitions of 'true' and 'false'. I dunno if this is a problem with the gdb package itself or the ebuild, but isn't there any quality control on packages before they're submitted to the CVS?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>plm</post_author>
+      <post_posted>Sun Apr 14, 2002 7:52 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 14, 2002 7:52 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n Anonymous wrote:   Personally, I tend to use emacs with syntax highlighting enabled for development, and gdb for debugging. \n\n\nIn emacs you run run gdb in so called 'gud-mode' (grand unified debugger   )&#13;\n\n\nThis enables you to use gdb without knowing all text commands, and also to set breakpoints by clicking on souce lines etc.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>slik</post_author>
+      <post_posted>Thu Apr 18, 2002 11:09 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Apr 18, 2002 11:09 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n tigerike wrote:   i use nedit it has full syntax highlighting for many languages. \n\n\nSo does vim  \n\nHead on over to http://www.dotfiles.com/ for some .vimrc (there are useful "dotfiles" for other programs there too) examples for your /home/dir\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>igouy</post_author>
+      <post_posted>Thu Apr 18, 2002 6:20 pm</post_posted>
+      <post_subject>Re: Debugger suggestions</post_subject>
+      <post_text>\n\nPosted: Thu Apr 18, 2002 6:20 pm&#160;&#160; &#160;Post subject: Re: Debugger suggestions\n  \n\n\n\n\n\n"learning C++ here on linux"&#13;\n\n\nwww.eclipse.org have a C++ project for their Eclipse IDE.&#13;\n\n\nlook in projects/eclipse tools project/C++ IDE\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>jmahler</post_author>
+      <post_posted>Thu Apr 18, 2002 8:15 pm</post_posted>
+      <post_subject>jed</post_subject>
+      <post_text>\n\nPosted: Thu Apr 18, 2002 8:15 pm&#160;&#160; &#160;Post subject: jed\n  \n\n\n\n\n\ni personally prefer jed or xjed.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Fri Apr 19, 2002 8:23 am</post_posted>
+      <post_subject>Re: Debugger suggestions</post_subject>
+      <post_text>\n\nPosted: Fri Apr 19, 2002 8:23 am&#160;&#160; &#160;Post subject: Re: Debugger suggestions\n  \n\n\n\n\n\n jeff wrote:   I'm almost afraid to ask this for fear of starting something, but I'm in the process of learning C++ here on linux instead of using Windows and Visual C++.  I'm currently using VIM and GDB, since it appears that the IDEs like KDEVELOP and ANJUTA are more for the purpose of developing GNOME or KDE applications than for just messing around with simple test programs learning C++.  So am I doing this the easy way or the hard way?  It's working for me, but I'm open to suggestions, and if you think I'm wrong about the IDEs I'd like to hear that too.  Jeff \n\n\nWell, If you like integrated environments like Visual C++, KDevelop does a nice job. You can start your project as plain C++ without using KDE or Gnome, and includes integrated debugger, code completion, class browser etc. With KVim it should even be possible to use vim inside kdevelop.&#13;\n\n\n--Tue\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>13</topic_index>
+    <topic_name>Gentoo Forums :: View topic - build.html code listing 17</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-13-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>zend</post_author>
+      <post_posted>Wed Apr 10, 2002 1:20 am</post_posted>
+      <post_subject>build.html code listing 17</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 1:20 am&#160;&#160; &#160;Post subject: build.html code listing 17\n  \n\n\n\n\n\nin www.gentoo.org/doc/build.html you said:"ooh!  A new prompt!"&#13;\n\nbut in my installation,I didn't see it.why?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tux-fan</post_author>
+      <post_posted>Wed Apr 10, 2002 1:43 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 1:43 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nsee this thread&#13;\n\nhttp://gentoo.frozenliquid.net/viewtopic.php?t=24\n\n(Nitro's posting)\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>pjp</post_author>
+      <post_posted>Sun Aug 18, 2002 2:57 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Aug 18, 2002 2:57 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nMoved from Bugs to Installing Gentoo.&#13;\n\n\nAlso note, the link tux-fan posted isn't currently working._________________lolgov. 'cause where we're going, you don't have civil liberties.&#13;\n\n\nIn Loving Memory\n\n1787 - 2008\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>8</topic_index>
+    <topic_name>Gentoo Forums :: View topic - Installation question</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-8-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>bobheff</post_author>
+      <post_posted>Tue Apr 09, 2002 8:58 pm</post_posted>
+      <post_subject>Installation question</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 8:58 pm&#160;&#160; &#160;Post subject: Installation question\n  \n\n\n\n\n\nI want to install Gentoo on my laptop.&#13;\n\n\nI've got some issue before I even start.&#13;\n\n\nFirstly, the only CD drive I have for the laptop is an external parallel port thing that I can't use as a boot device.  The bios doesn't see it (it needs it's own drivers).  In fact, the bios has no options at all for booting from any type of CD drive (so I suspect if I had a usb drive it wouldn't be of much use either)&#13;\n\n\nSo - I had a look at the alternative instllation guide page at&#13;\n\nhttp://www.gentoo.org/doc/altinstall.html\n\nwhich suggests I create a GRUB boot floppy, enable network support on this floppy and access the installation files via tftp.&#13;\n\n\nHaving downloaded the GRUB source and having perused it's readme files it would seem that it has no support for PCMCIA ethernet cards (which is, of course, what I'm using for the laptop).  Thus, this second method would also appear to not be an option.&#13;\n\n\nThe idea of a "harddrive install" was mentioned to me.  I'm currently running slackware on this machine dualboot with win98).  Is there some way I could install without having to boot from the CD or floppy?&#13;\n\nAlternatively, is there such a thing as an installation floppy as in some other distros?&#13;\n\n\nthanks for your help&#13;\n\n\nbob\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Tue Apr 09, 2002 9:10 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:10 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI've used slackware floppy's here, with network support. I don't know if the slackware net-bootdisks are ready for pcmcia cards, but it's a try.. &#13;\n\n\nAfter that, mount a nfs share, or the cdrom if it works, and extract the build-*.tar.gz as normal.._________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Tue Apr 09, 2002 9:43 pm</post_posted>
+      <post_subject>Had the same problem</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:43 pm&#160;&#160; &#160;Post subject: Had the same problem\n  \n\n\n\n\n\nI had the same exact problem, laptop couldn't boot a CD, and I couldn't find a bootdisk that included pcmcia drivers.  I did try using Tom's Root Boot, but it was nice enough to shut-off the backlit on my monitor. \n\n\nAnyway, I found a way as Roel mentioned, slackware boot disks work:&#13;\n\n 1) Find some floppies on one put the bare.i image (make sure and use the 2.4.5 image, we need the mount -o bind support in the kernel to mount /proc), and on the second floppy put color.gz.&#13;\n\n\n2) Boot it up and get to the command line, now on another disk put the pcm245.dsk image on it, pop it in the drive, and run pcmcia (I think?).  Now, you should be able to set up your networking and ping your gateway.&#13;\n\n\n3) This is the part that I tripped over the first time, the slackware bootdisks don't include support for bzip2, so once you  get your NFS share setup correctly, you still can't extract it.  So, first run bzip2 -d &lt;build name&gt;.tar.bz2 and it should leave you with just a tar file, now you can tar -xvpf &lt;build name&gt;.tar (don't include -j because it isn't in bzip2 form anymore).&#13;\n\n\n4) You should beable to patch the rest together now.  The only disadvantage that I see to doing this is you can only use make ext2 and reiser filesystems.  I made an ext2 and just tuned it to ext3 after gentoo was in.&#13;\n\n\nMaybe I forgot something, hope not, tell me how it goes.  Another way instead of having to use slack disk is to try toms root boot.  Looks like for the first time in a long time a new version was released. I tried 1.7 something and 2.0.9 was released today, and claims to have pcmcia support. I would check that out first: http://www.toms.net/rb/ . _________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.Last edited by Nitro on Sat Apr 13, 2002 12:06 am; edited 1 time in total\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>bobheff</post_author>
+      <post_posted>Thu Apr 11, 2002 12:44 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 12:44 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nJust to let you guys know how I've got on:&#13;\n\n\nThe slakware bootdisks work a treat.&#13;\n\nI used the pportide.i bootdisk as this enables me to use my external parallel port cd drive to get the gentoo stuff.&#13;\n\n\nHaving booted this and given it the normal rootdisk (color.gz) I wrote myself a copy of the pcmcia floppy (pcmcia.dsk) and typed 'pcmcia' as nitro said which found my network card with no problems at all.  From then on it was plain sailing...&#13;\n\n\nthanks guys_________________--&#13;\n\nRobert Heffernan&#13;\n\nhttp://ocean.ucc.ie/~rh2\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>5</topic_index>
+    <topic_name>Gentoo Forums :: View topic - what?  no avatars??</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-5-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fatty</post_author>
+      <post_posted>Tue Apr 09, 2002 2:14 am</post_posted>
+      <post_subject>what?  no avatars??</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 2:14 am&#160;&#160; &#160;Post subject: what?  no avatars??\n  \n\n\n\n\n\nfor shame!  Avatars would *really* make this sweet._________________I wouldn't recommend sex, drugs or insanity for everyone, but they've always worked for me. &#13;\n\n\n-Dr. Hunter S. Thompson\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Tue Apr 09, 2002 3:13 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 3:13 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nAll fixed, forgot to turn it on.  Doh!&#13;\n\n\nMaybe my avatar is alittle too big.  Oh well, with this forum you can upload your own. _________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Tue Apr 09, 2002 9:18 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:18 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nweird... this topic is moved, but is shows up in /dev/null and  gentoo.frozenliquid.net... &#13;\n\n\nBug or is it normal ? (Topic stays in the forum for x hours so everyone is able to find it ?)_________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Tue Apr 09, 2002 9:46 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 9:46 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nIn the index for the /dev/null it the topic title is prefixed with "Moved: "  It was an option when moving, they called it shadow post or something._________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>ansient</post_author>
+      <post_posted>Tue Jun 21, 2005 3:01 pm</post_posted>
+      <post_subject>Re: what?  no avatars??</post_subject>
+      <post_text>\n\nPosted: Tue Jun 21, 2005 3:01 pm&#160;&#160; &#160;Post subject: Re: what?  no avatars??\n  \n\n\n\n\n\n fatty wrote:   for shame!  Avatars would *really* make this sweet. \n\nWell then, how long is it gonna take for you to find a good avatar?  Is this forum not 'sweet' enough, yet?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Roel</post_author>
+      <post_posted>Tue Jun 21, 2005 3:36 pm</post_posted>
+      <post_subject>Re: what?  no avatars??</post_subject>
+      <post_text>\n\nPosted: Tue Jun 21, 2005 3:36 pm&#160;&#160; &#160;Post subject: Re: what?  no avatars??\n  \n\n\n\n\n\n ansient wrote:    fatty wrote:   for shame!  Avatars would *really* make this sweet. \n\nWell then, how long is it gonna take for you to find a good avatar?  Is this forum not 'sweet' enough, yet? \n\n\nWell.. He had 3 years, he should have found an avatar by now.. _________________Woei.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>CitizenX</post_author>
+      <post_posted>Tue Jun 21, 2005 4:10 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Jun 21, 2005 4:10 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nwow talk about resurrection from the grave......this might just get the record for the oldest zombie thread.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>ansient</post_author>
+      <post_posted>Tue Jun 21, 2005 4:24 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Jun 21, 2005 4:24 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nRrrrrrnnnnnnnnnnnnnnnnnnn\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>pilla</post_author>
+      <post_posted>Tue Jun 21, 2005 7:37 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Tue Jun 21, 2005 7:37 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nLet it die._________________"I'm just very selective about the reality I choose to accept." -- Calvin\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>18</topic_index>
+    <topic_name>Gentoo Forums :: View topic - random characters during installation</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-18-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 2:10 am</post_posted>
+      <post_subject>random characters during installation</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:10 am&#160;&#160; &#160;Post subject: random characters during installation\n  \n\n\n\n\n\nis it just my machine or do you guys see random characters floating around the screen every once in a while during installation?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Wed Apr 10, 2002 4:15 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:15 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI have experienced weird characters for my prompt after using the cat command on a binary file, but i dont' think ever during installation.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 4:24 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:24 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nmaybe it's just my video card then...  it gives me problems in windows.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>matthew</post_author>
+      <post_posted>Wed Apr 10, 2002 7:25 pm</post_posted>
+      <post_subject>random characters whilst running</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 7:25 pm&#160;&#160; &#160;Post subject: random characters whilst running\n  \n\n\n\n\n\nI also see random characters, not during installation but after, normally what happens is a single character will change. and as I scroll up and down the command history it goes and comes back. Really odd.&#13;\n\n\nThe system is totally up to date, and I have NVidia video card, I haven't experianced any problems in Windows (M$ or X) though, oh, one problem, if I enable the framebuffer, then the system locks if I restart X, and the cursor is screwy (purple bars top and bottom).\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>troymc</post_author>
+      <post_posted>Mon May 29, 2006 11:32 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon May 29, 2006 11:32 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nWOW!  \n\n\nYou guys need to share whatever it is you're on!   \n\n\n\n\nActually, I had a similar problem that was traced back to video drivers. Artifacts during scrolling with an ATI card. New drivers fixed it.&#13;\n\n\n\ntroymc\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>cyblord</post_author>
+      <post_posted>Mon May 29, 2006 11:47 pm</post_posted>
+      <post_subject>Re: random characters during installation</post_subject>
+      <post_text>\n\nPosted: Mon May 29, 2006 11:47 pm&#160;&#160; &#160;Post subject: Re: random characters during installation\n  \n\n\n\n\n\n niyogi wrote:   is it just my machine or do you guys see random characters floating around the screen every once in a while during installation? \n\n\n eh??&#13;\n\n\nyou don't mean when your system's compiling stuff, do you?\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>10</topic_index>
+    <topic_name>Gentoo Forums :: View topic - This Forum Looks are INCRERIBLY COOL!!</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-10-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>m3thos</post_author>
+      <post_posted>Tue Apr 09, 2002 10:36 pm</post_posted>
+      <post_subject>This Forum Looks are INCRERIBLY COOL!!</post_subject>
+      <post_text>\n\nPosted: Tue Apr 09, 2002 10:36 pm&#160;&#160; &#160;Post subject: This Forum Looks are INCRERIBLY COOL!!\n  \n\n\n\n\n\namazing!! so, much so so so cool! &#13;\n\nIs there a theme for kde3 to be like this?&#13;\n\nAnd xmms, mozilla?_________________Miguel Sousa Filipe&#13;\n\nhandle: m3thos&#13;\n\nMore human than human\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 1:40 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 1:40 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nfor a default theme to phpbb, this is smooth.  just MAKES you want to post.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>cyb0rg</post_author>
+      <post_posted>Wed Apr 10, 2002 4:01 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:01 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nyea, great job.  I hope gentoo will accept this as the official forum \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Wed Apr 10, 2002 4:05 am</post_posted>
+      <post_subject>Maybe....</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:05 am&#160;&#160; &#160;Post subject: Maybe....\n  \n\n\n\n\n\nI talked to D. Robbins about it on IRC very very briefly, he sounded excited. Now, if he could only point forums.gentoo.org at me we'd be set _________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 4:20 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:20 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nhmm...  for scaleability's sake, it doesn't make so much sense to have forums.gentoo.org point here.. although I can't think of an alternative except that gentoo.org host it on their *own* server which is probably much more robust that the topology under which this server is running.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Sun Apr 21, 2002 5:29 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 21, 2002 5:29 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nMy only objection is that it's hard to see the scroll bar with the default theme.  This whole site-controlling-the-look-of-the-scollbar thing scares me anyway \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fghellar</post_author>
+      <post_posted>Sun Apr 21, 2002 6:07 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 21, 2002 6:07 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nYou're running Konqueror, right? \n\nI also noticed this... It doesn't happen with Galeon..._________________| www.gentoo.org | www.tldp.org | www.google.com |\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>dice</post_author>
+      <post_posted>Sun Apr 21, 2002 8:21 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sun Apr 21, 2002 8:21 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n fghellar wrote:   You're running Konqueror, right? \n\nI also noticed this... It doesn't happen with Galeon... \n\n\nYeah, I think konqueror looks a lot better than Galeon/Mozilla (for now).  I fixed the problem by creating an account and changing the theme \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Mallrats</post_author>
+      <post_posted>Sat Jul 27, 2002 1:29 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Jul 27, 2002 1:29 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI have an account here, but the only theme I can see is subsilver&#13;\n\nIs that because I'm a n00b?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>syadnom</post_author>
+      <post_posted>Thu Aug 15, 2002 10:05 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Aug 15, 2002 10:05 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\ni do like the forums look, very nice, and simple..&#13;\n\n\ni think this is the only style available Mallrats.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Thu Aug 15, 2002 10:47 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Aug 15, 2002 10:47 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nway back when other styles were available but dunno where they went\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>syadnom</post_author>
+      <post_posted>Thu Aug 15, 2002 10:52 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Aug 15, 2002 10:52 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\ndo a search, Nitro removed them to make maintainance easier or something, he said if someone starts up a poll and gets good response, he would put them back, do a search for styles poll or something.\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>19</topic_index>
+    <topic_name>Gentoo Forums :: View topic - Install Gentoo with pppoe??</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-19-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Someone</post_author>
+      <post_posted>Wed Apr 10, 2002 2:20 am</post_posted>
+      <post_subject>Install Gentoo with pppoe??</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:20 am&#160;&#160; &#160;Post subject: Install Gentoo with pppoe??\n  \n\n\n\n\n\nHi,&#13;\n\n\nI am having a problem, I want to install gentoo linux but the &#13;\n\ndhcpcd client doesn't recognize a dhcp server on my service, my service uses pppoe for dynamic ip.  Is there any way to install gentoo through pppoe?&#13;\n\n\nThanks\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Vlad</post_author>
+      <post_posted>Wed Apr 10, 2002 4:57 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:57 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nYes, as of version 1.1a gentoo supports pppoe installation, but I have no idea how to install using pppoe. Check gentoo.org, or search google for a howto maybe.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>drobbins</post_author>
+      <post_posted>Wed Apr 10, 2002 5:04 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 5:04 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nThe pppoe support on our 1.1a CD is probably broken, but it should be possible to fix in-place by making a /usr/lib/pppd/2.4.1 directory and moving all the *.so files in /etc/ppp inside that directory.  Sorry for the mix-up! -- Daniel\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>niyogi</post_author>
+      <post_posted>Wed Apr 10, 2002 7:51 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 7:51 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\ndrobbins,&#13;\n\n\nare you using the roaring penguin client (i do not know of any other ones)?\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Someone</post_author>
+      <post_posted>Wed Apr 10, 2002 10:25 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 10:25 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nHi,&#13;\n\n\nJust to make sure I understand. After I made the fix you said, all I have to do next is run "start-adsl" (rp-pppoe) and I'll be able to connect to my provider?&#13;\n\n\nThanks.&#13;\n\n\n\n drobbins wrote:   The pppoe support on our 1.1a CD is probably broken, but it should be possible to fix in-place by making a /usr/lib/pppd/2.4.1 directory and moving all the *.so files in /etc/ppp inside that directory.  Sorry for the mix-up! -- Daniel \n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Jondot</post_author>
+      <post_posted>Thu Apr 11, 2002 8:38 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Apr 11, 2002 8:38 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI had the same problem, my cable provider having changed from dhcpd to pppoe. \n\n\nI spent a few hours trying to setup my pppoe connection, and did what follows :&#13;\n\n\nI downloaded the sources for ppp 2.4.1 and rp-pppoe from www.roaringpenguin.com, and let them in a partition I was able to mount later on.&#13;\n\n\nAfter preparing and formatting the partitions, I untarred the biggest tarball for gentoo (stage 3), compiled a new kernel, and its modules, installed the bzImage of course in /boot and configured grub and booted again, this time from the hard disk...&#13;\n\n\nThen I compiled and installed, in that order, ppp 2.4.1 and rp-pppoe, then the classics, adsl-setup, adsl-start...&#13;\n\n\n(I had some problems because the backspace key generates some annoying control characters that doesn't necessarily show on screen. If you can't connect, have a look at /etc/ppp/chap-secrets, /etc/ppp/pap-secrets...)&#13;\n\n\nNow I can emerge and come back to a gentoo installation...&#13;\n\n\nI haven't found any way, using stage1 or stage2, of connecting via pppoe.&#13;\n\n\nLet's hope next iso will contain some basics for pppoe connections...\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>bonito</post_author>
+      <post_posted>Wed May 01, 2002 8:14 pm</post_posted>
+      <post_subject>Whoo HOO</post_subject>
+      <post_text>\n\nPosted: Wed May 01, 2002 8:14 pm&#160;&#160; &#160;Post subject: Whoo HOO\n  \n\n\n\n\n\nGentoo is building as I speak    WITH PPPOE INSTALL  I got a suggestion on how to do it from a post I read on here...this is what I did:&#13;\n\n\n1) booted into my mandrake install which utilizes my pppoe connection&#13;\n\n\n2) opened up a shell window&#13;\n\n\n3) followed the instructions skipping the networking part (I already had made an xfs partition from a previous failed install attempt so I didnt need to fdisk but you would normally start from there)  &#13;\n\n\nI also did not make a new boot or swap partition, because I intend on using lilo (mandrake bootloader) to add gentoo to my bootloader, and I have a swap partition already created for my mandrake install that I will use with gentoo.  It will save me some disk space  \n\n\nNow this raises a question...how do I configure gentoo so that it knows to mount the swap partition at boot?  do I just edit fstab? (I am still learning about linux so I got a long way to go).\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tooobi</post_author>
+      <post_posted>Wed May 01, 2002 9:18 pm</post_posted>
+      <post_subject>Re: Whoo HOO</post_subject>
+      <post_text>\n\nPosted: Wed May 01, 2002 9:18 pm&#160;&#160; &#160;Post subject: Re: Whoo HOO\n  \n\n\n\n\n\n bonito wrote:   blahblah....&#13;\n\nNow this raises a question...how do I configure gentoo so that it knows to mount the swap partition at boot?  do I just edit fstab? (I am still learning about linux so I got a long way to go). \n\n\nyes, simply using one swap for as many linuxes as you want, is possible.&#13;\n\n\n... with one drawback:&#13;\n\nyou won't be able to use the new suspend to disc feature (new in sys-kernel/gentoo-sources-2.4.19).&#13;\n\nthe suspended image will be saved on your swap partition and booting another linux installation will (most likely) remove it or don't start at all.&#13;\n\n\nhaving said that, i nevertheless do.&#13;\n\n\nthis is, how a swap entry in /etc/fstab can look like:&#13;\n\n&gt; grep "swap" /etc/fstab&#13;\n\n/dev/hda13              none            swap            sw              0 0&#13;\n\n\n# i.e /dev/hda13 is my swap partition. change to your setup!&#13;\n\n\nhope this helps.&#13;\n\n\n~tooobi\n\n</post_text>
+    </topic_post>
+  </topic>
+  <topic>
+    <topic_index>20</topic_index>
+    <topic_name>Gentoo Forums :: View topic - PLEASE, a list of USE variables with descriptions!</topic_name>
+    <topic_address>https://forums.gentoo.org/viewtopic-t-20-postdays-0-postorder-asc-start-25.html</topic_address>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Jebus</post_author>
+      <post_posted>Wed Apr 10, 2002 2:20 am</post_posted>
+      <post_subject>PLEASE, a list of USE variables with descriptions!</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:20 am&#160;&#160; &#160;Post subject: PLEASE, a list of USE variables with descriptions!\n  \n\n\n\n\n\nI would LOVE to have a list of all USE variables with short descriptions of each. As it is I had to do google searches on what each of the listed ones do, and there are lots I am sure I don't even know about.&#13;\n\n\nLove the distro though, good work!_________________The only difference between a brown-noser and a shithead is depth perception.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fatty</post_author>
+      <post_posted>Wed Apr 10, 2002 2:38 am</post_posted>
+      <post_subject>on the same note...</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 2:38 am&#160;&#160; &#160;Post subject: on the same note...\n  \n\n\n\n\n\nI found that the default USE settings found in the make.default file result in some ridiculous dependcies.  For instance, when I wanted to emerge vim, it was claiming that xfree, gnome-libs, esd, and a bunch of other crazy packages were needed before I could install vim!  I found the install doc to be less than helpful in explaining how to correct this, and I only found my answer when I visited #gentoo (Thanks nitro!)_________________I wouldn't recommend sex, drugs or insanity for everyone, but they've always worked for me. &#13;\n\n\n-Dr. Hunter S. Thompson\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Nitro</post_author>
+      <post_posted>Wed Apr 10, 2002 3:33 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 3:33 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI think we should have a definition of the USE settings and several make.defaults, maybe have something like:&#13;\n\nmake.defaults.laptop&#13;\n\nmake.defaults.server&#13;\n\nmake.defaults.server&#13;\n\nmake.defaults.minimal\n\nI remember that Gentoo RC6 or something had a list of what the USE settings meant._________________- Kyle Manna&#13;\n\n\nPlease, please SEARCH before posting.\n\n\nThere are three kinds of people in the world:  those who can count, and those who can't.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Jebus</post_author>
+      <post_posted>Wed Apr 10, 2002 3:37 am</post_posted>
+      <post_subject>good idea</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 3:37 am&#160;&#160; &#160;Post subject: good idea\n  \n\n\n\n\n\nYeh i like that - perhaps base, gnome and kde base make files, and then we can add things like OSS to them if we need._________________The only difference between a brown-noser and a shithead is depth perception.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>fatty</post_author>
+      <post_posted>Wed Apr 10, 2002 4:18 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 4:18 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nI hate to keep bringing up Sorcerer GNU Linux, but the way they handle dependencies is to find all deps for a particular package you want to install, rank them as either "required" or "optional", and then, before any downloading or compiling begins, asks the user if they would like to install the required/optional dependency with a one-sentence description of what it actually is/does.  If the user does not respond at all, there is a default answer (yes for required, no for optional) that gets entered after a (configurable) wait time.&#13;\n\n\nThis sort of system would solve several problems with Gentoo:&#13;\n\n1. when installing simple apps like vim, the default USE settings require X and lots of other crazy apps as "dependencies" - this way, the user could opt out of optional ones they did not want to install.&#13;\n\n2. given the automatic timeout nature of the questions, this could be implemented to provide a more automatic install, where if no answer is given, the most common choice is selected at the end of the timeout period - or the user could even set the timeout variable to zero for a completely automatic install.&#13;\n\n\nFrom what I have seen, Gentoo solves many problems that Sorcerer has, but there is also much that Gentoo can benefit from by taking a good look at the way Sorcerer interacts with the user._________________I wouldn't recommend sex, drugs or insanity for everyone, but they've always worked for me. &#13;\n\n\n-Dr. Hunter S. Thompson\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Ozymandias</post_author>
+      <post_posted>Wed Apr 10, 2002 11:32 am</post_posted>
+      <post_subject>Re: on the same note...</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 11:32 am&#160;&#160; &#160;Post subject: Re: on the same note...\n  \n\n\n\n\n\n fatty wrote:    it was claiming that xfree, gnome-libs, esd, and a bunch of other crazy packages were needed before I could install vim!  &#13;\n\n...&#13;\n\nand I only found my answer when I visited #gentoo (Thanks nitro!) \n\n\neuh, could you enlighten us too? I removed stuff from my use variables and still it seems to want these dependancies, even if I do an "export USE="-kde" and others, mplayer still wanted qt and arts, and XMMS the same, while their websites clearly state only X some libs and gtk (mplayer fronted). Solution: just wait longer \n\n\nbut that is no fun.. besides, I had the exact same problem with vim, so I decided to postpone vim and do a GNOME install first.&#13;\n\n\ngreetz Ozy\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>twfox</post_author>
+      <post_posted>Wed Apr 10, 2002 5:26 pm</post_posted>
+      <post_subject>Re: on the same note...</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 5:26 pm&#160;&#160; &#160;Post subject: Re: on the same note...\n  \n\n\n\n\n\n Ozymandias wrote:   \n\neuh, could you enlighten us too? I removed stuff from my use variables and still it seems to want these dependancies, even if I do an "export USE="-kde" and others, mplayer still wanted qt and arts, and XMMS the same, while their websites clearly state only X some libs and gtk (mplayer fronted). Solution: just wait longer \n\n\nbut that is no fun.. besides, I had the exact same problem with vim, so I decided to postpone vim and do a GNOME install first.&#13;\n\n\ngreetz Ozy \n\n\nI had the same problems with xmms, etc.  I hunted around the ebuilds and found that adding a -sdl in addition to -kde -qt seemed to do the trick.  Now I just need to find out exactly what -sdl does...\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>HooL</post_author>
+      <post_posted>Wed Apr 10, 2002 7:00 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 7:00 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nSDL is multimedia stuff.. ( http://www.libsdl.org/ )&#13;\n\nGraphic/sound libraries I think.. some games are based on those.. see apps-games\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>Guest</post_author>
+      <post_posted>Wed Apr 10, 2002 7:02 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 7:02 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n-sdl uses the sdl libraries which are multiplatform, so your programs wil be source compatible. Say you want to make a game for windows mac an linux, use sdl ..&#13;\n\n\nfurther more, I changed /etc/make.globals but now I know I should have used /etc/make.profile/make.default&#13;\n\n\nunfortunately I spend many hours compiling qt 3 and qt2 and arts and stuff ..&#13;\n\n\ngreetz Ozy\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>pcgod</post_author>
+      <post_posted>Wed Apr 10, 2002 9:10 pm</post_posted>
+      <post_subject>Re: on the same note...</post_subject>
+      <post_text>\n\nPosted: Wed Apr 10, 2002 9:10 pm&#160;&#160; &#160;Post subject: Re: on the same note...\n  \n\n\n\n\n\n fatty wrote:   I found that the default USE settings found in the make.default file result in some ridiculous dependcies.  For instance, when I wanted to emerge vim, it was claiming that xfree, gnome-libs, esd, and a bunch of other crazy packages were needed before I could install vim!  \n\n\nhehe, I had a similar problem with licq. I have 1.0.4-r1 (I believe that's the one), and --update world told me I needed to upgrade to -r2, and with that, all kinds of kde deps and such. I don't want to polute my system with that stuff. I wonder why the same version of the application all of a sudden needs these deps between ebuild versions. yes, I have -kde and a bunch of other apps I dont' want to have in my USE settings in make.conf (which portage constantly wants to update ) Oh well, I just stuck it at -rc1 for now until I have time to poke around that ebuild and figure out wtf is going on with it. Cheers_________________-- PC^God --\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>freefall</post_author>
+      <post_posted>Sat Apr 13, 2002 10:35 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Sat Apr 13, 2002 10:35 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nThere's a list of USE variables in /usr/portage/profiles/use.desc.&#13;\n\n\nI don't think it's an "official" list yet, and not all variables have a description, but it's a start.\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>g2boojum</post_author>
+      <post_posted>Mon Apr 15, 2002 2:45 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Mon Apr 15, 2002 2:45 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\n[quote="fatty"]I hate to keep bringing up Sorcerer GNU Linux, but the way they handle dependencies is to find all deps for a particular package you want to install, rank them as either "required" or "optional", and then, before any downloading or compiling begins, asks the user if they would like to install the required/optional dependency with a one-sentence description of what it actually is/does.  If the user does not respond at all, there is a default answer (yes for required, no for optional) that gets entered after a (configurable) wait time.&#13;\n\n\n\nWe're working on a reasonable list of USE variables right now.  The reason we don't use the Sorcerer approach is due to the Gentoo design philosophy that emerge/ebuild is _not_  interactive.  Some reasonable method of interrogating ebuilds for their optional functionality is required, though, and we're working on that.  (You can follow bug # 1771 if you like.)\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>moonlite</post_author>
+      <post_posted>Wed Apr 17, 2002 6:55 am</post_posted>
+      <post_subject>how a bout a --interactive mode?</post_subject>
+      <post_text>\n\nPosted: Wed Apr 17, 2002 6:55 am&#160;&#160; &#160;Post subject: how a bout a --interactive mode?\n  \n\n\n\n\n\nhow about just adding a --interactive mode that is similar to the approach sorcery linux does it... in that way gentoo users CAN use an interactive mode if they like it... i like the noniteractive mode very much... its like great to be able to just do an emerge gnome without having even x installed and just go and watch a movie or something....\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>tvon</post_author>
+      <post_posted>Wed Apr 17, 2002 1:25 pm</post_posted>
+      <post_subject>Re: how a bout a --interactive mode?</post_subject>
+      <post_text>\n\nPosted: Wed Apr 17, 2002 1:25 pm&#160;&#160; &#160;Post subject: Re: how a bout a --interactive mode?\n  \n\n\n\n\n\n moonlite wrote:   how about just adding a --interactive mode that is similar to the approach sorcery linux does it... in that way gentoo users CAN use an interactive mode if they like it... i like the noniteractive mode very much... its like great to be able to just do an emerge gnome without having even x installed and just go and watch a movie or something.... \n\n\nCurrently because it would take alot of time and effort that is better spent elsewhere.&#13;\n\n\nNot to bash on your ideas/wants/needs, but an interactive mode is more of a luxury than anything else...&#13;\n\n\n\n\n\n-T_________________\n\nPython Powerd Web Hosting&#13;\n\nhttp://www.etria.com/\n\nWebware, Zope, CGI, More on request...&#13;\n\n\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>hazelnut</post_author>
+      <post_posted>Thu Apr 18, 2002 10:05 am</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Thu Apr 18, 2002 10:05 am&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\nWouldn't the best thing be to have a way to control the ebuild? Not an interactive mode - not just because of the time/effort to add it, but because it would loose the 'press button and come back (much) later' propery that it the only way mere mortals (&lt;2GHz CPU) can use portage!  \n\n\nSo, some way of disabling some of the dependencies marked by adding a cmd line option (e.g. emerge -nodep unwanted1,unwanted2 mypackage)&#13;\n\n\nObviously very likely to fail if user doesn't know what they are doing, but I decided not to do vim last night because of the huge list of deps... must work out the USE vars soon!&#13;\n\n\nAndy\n\n</post_text>
+    </topic_post>
+    <topic_post>
+      <post_page_offset>0</post_page_offset>
+      <post_author>dArkMaGE</post_author>
+      <post_posted>Wed Apr 24, 2002 10:56 pm</post_posted>
+      <post_subject></post_subject>
+      <post_text>\n\nPosted: Wed Apr 24, 2002 10:56 pm&#160;&#160; &#160;Post subject: \n  \n\n\n\n\n\neveryone rejoice, as of today they just posed a list of all the USE vars with much explanation on the gentoo.org website\n\n</post_text>
+    </topic_post>
+  </topic>
+</root>
